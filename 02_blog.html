@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./style.css">
+
+        <title>
+            J-Keebs | Blog
+            
+        </title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>
+                J-Keebs
+            </h1>
+            <h3>
+                Home of the Finest German Mechanical Keyboards
+            </h3>
+            <hr>
+        </header>
+
+        <nav>
+            <section class="flex-row">
+                <a href="01_home.html" class="item">Home</a>
+
+                <a href="02_blog.html" class="item" style = "color: #e4dfd6;">Blog</a>
+
+                <a href="03_forum.html" class="item">Forum</a>
+
+                <a href="04_keyboards.html" class="item">Keyboards</a>
+
+                <a href="05_switches.html" class="item">Switches</a>
+
+                <a href="06_about_us.html" class="item">About Us</a>
+
+                <a href="07_faq.html" class="item">FAQ</a>
+            </section>
+
+            
+            <ul type="square">
+                <li>
+                    <a href="01_home.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="02_blog.html" style = "color: #e4dfd6;">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="03_forum.html">
+                        Forum
+                    </a>
+                </li>
+
+                <li>
+                    <a href="04_keyboards.html">
+                        Keyboards
+                    </a>
+                
+                    <ul type="square">
+                        <li>
+                            <a href="04_keyboards.html">
+                                Portfolio
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="05_switches.html">
+                        Switches
+                    </a>
+                    <ul type="square">
+                    <li>
+                        <a href="05_switches.html">
+                            Unterschiede
+                        </a>
+                    </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="06_about_us.html">
+                        Über uns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="07_faq.html">
+                        FAQ
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <main>
+            <h2>
+                Blog
+            </h2>
+
+            <section>
+
+                <article>
+                    <h3>
+                        Beginn von etwas ganz großem
+                    </h3>
+                    <p>
+                        Hier wird eine neue Webseite entstehen auf der sich alles um Tastaturen dreht - vor allem deutsche, mechanische Tastaturen. Hierbei handelt es sich um den ersten großen Schritt in die Richtung Tastatur-Weltherrschaft.
+                    </p>
+
+                </article>
+
+            </section>
+
+            <hr>
+
+            <section>
+
+                <article>
+                    <h3>
+                        Projekt J80-3000 - Upcycling eines alten Klassikers
+                    </h3>
+                    <p>
+                        Da Ich schon die ein oder andere Tastatur auseinandergenommen habe, beschloss ich vor kurzem ein anspruchvolleres Projekt zu beginnen - Einen <strong>Controller-Swap</strong>. <br>
+                    </p>
+                    <p>
+                        Ich liebe den Look der <strong>Cherry G80-3000</strong> und konnte einige verschiedene Ausführungen der Tastatur für wenig Geld in meine Finger bekommen. Nur leider kann sie mit heutigen mechanischen Tastaturen nicht mithalten. Die Cherry hat keine Positioning-Plate, kein Hot-Swap, kein N-Key-Rollover, keine Programmierbarkeit, keinen Dämmstoff, und verbesserungswürdigen Sound. Auch Switches machen andere heute besser als der Erfinder der MX-Switches.<br>
+                        Aber, weil sie zu hübsch ist um zu verstauben, dachte Ich mir, mit meiner Erfahrung und meinem Know-How, nachdem ich schon mehrere Tastaturen für Freunde und Verwandte zusammengebaut und gemoddet habe, könne Ich das Teil sowohl technisch als auch haptisch und optisch aufwerten. So kann ich meinen Horizont erweitern und besser im Programmieren und der Elektrotechnik werden und nebenbei vielleicht sogar noch etwas gutes für die Umwelt tuen. Ich bin bestimmt nicht der einzige mit einer staubigen G80, einem Fable für Tasten und ein wenig Basteldrang.<br>
+                    </p>
+                    <p>
+                        Soweit habe den in der G80 verbauten Motorola-Chip entfernt und mit einen WeAct Blackpill STM32-F411 ersetzt, welchen ich mit einem MCP 23017 I2C Expander verbunden habe um genug GPIO-Pins für die Full-Size-Matrix zu haben. Ich habe alles miteinander verlötet und verbunden. Jetzt arbeite ich daran die Firmware mit Hilfe von <strong>QMK</strong> zu schreiben. Durch den I2C-Expander ist jedoch nötig eine eigene Scan-Routine in C zu schreiben - etwas worin ich bisher noch keine Erfahrung habe. Ich habe es geschafft eine Firmware zu schreiben und sie auf den Blackpill zu flashen. Dieser wird auch als Tastatur-Device vom PC erkannt, aber darüber hinaus gibt sie kein Lebenszeichen von sich.<br>
+                    </p>
+                    <p>
+                        Jetzt ist erst mal wieder Gedanken machen und Recherche betreiben angesagt, bis Ich endlich ein Lebenszeichen von ihr bekomme. Bis es soweit ist müsst Ihr euch aber wohl noch gedulden.<br>
+                        Ihr hört von mir wenn es was neues zu berichten gibt!
+                    </p>
+                </article>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <hr>
+                <a href="90_impressum.html">
+                    Impressum |
+                </a>
+
+                <a href="91_datenschutz.html">
+                    Datenschutz |
+                </a>
+
+                <a href="92_cookies.html">
+                    Cookies |
+                </a>
+
+                <a href="93_geschaeftsbedingungen.html">
+                    Geschäftsbedingungen |
+                </a>
+
+                <a href="94_kontakt.html">
+                    Kontakt
+                </a> <br>
+            &copy; 2026 J-Keebs - Alle Rechte vorbehalten.
+        </footer>
+    
+    </body>
+
+</html>

@@ -1,0 +1,71 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: #353433;
+    color: #d6caaf;
+    letter-spacing: 1px;
+}
+
+h1 ,h2, h3, h4, h5, h6{
+    color: #e4dfd6;
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 64px;
+}
+
+code{
+    font-family: monospace;
+    color: #ffae18;
+}
+
+hr{
+border-color: #645e50;
+border-width: 1px;
+border-style: solid;
+}
+
+a{
+    text-decoration-line: none;
+    color: #dbc38b;
+}
+
+.gallerie, iframe, img{
+    border: 8px solid #dbd8d1;
+    margin: 24px;
+    max-width: 900px;
+    
+    
+}
+
+dt{
+    font-size: 120%;
+    color: hsl(36, 50%, 76%);
+    margin-left: 12px;
+}
+
+.faq_section{
+    border-top: 2px solid #645e50;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    border: 2px solid #ccc;
+    padding: 10px;
+    background: #645e50;
+    flex: 11;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    
+    justify-content: space-between;
+}
