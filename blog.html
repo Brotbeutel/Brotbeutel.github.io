@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Der J-Keebs-Blog: Baufortschritt, Umwege und Lessons Learned rund um Custom-Tastaturen – aktuell der Umbau der Cherry G80-3000 zum J80-3000.">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("jkeebs-theme") || "dark";
+                document.documentElement.setAttribute("data-theme", t);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <title>J-Keebs | Blog</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
+            <span class="keycap">J</span>
+            <span class="brand__name">J-Keebs</span>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="blog.html" aria-current="page" data-i18n="nav.blog">Blog</a>
+            <a href="forum.html" data-i18n="nav.forum">Forum</a>
+            <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
+            <a href="switches.html" data-i18n="nav.switches">Switches</a>
+            <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="utility-nav">
+            <div class="lang-toggle" role="group" aria-label="Sprache wählen">
+                <button type="button" data-lang-toggle="de" aria-pressed="true">DE</button>
+                <button type="button" data-lang-toggle="en" aria-pressed="false">EN</button>
+            </div>
+            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Farbschema umschalten" data-i18n-attr="aria-label:utility.theme.aria">
+                <span aria-hidden="true">☾</span>
+                <span aria-hidden="true">☀</span>
+                <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero page-hero--single">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Blog</p>
+            <h1 data-i18n="hero.heading">Baufortschritt, Umwege, Lessons Learned.</h1>
+            <p data-i18n="hero.intro">Ehrlich dokumentiert: was funktioniert, was nicht, und warum. Kein Hochglanz-Rezept, sondern der echte Weg vom Fundstück zum fertigen Build.</p>
+        </section>
+
+        <section class="section">
+            <div class="section__inner blog-list">
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post2.meta">Werkstattbericht · Projekt J80-3000</p>
+                    <h2 data-i18n="post2.title">Projekt J80-3000 – Upcycling eines alten Klassikers</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post2.p1">Da ich schon die ein oder andere Tastatur auseinandergenommen habe, beschloss ich vor Kurzem, ein anspruchsvolleres Projekt zu beginnen – einen Controller-Swap.</p>
+                        <p data-i18n="post2.p2">Ich liebe den Look der Cherry G80-3000 und konnte einige verschiedene Ausführungen der Tastatur für wenig Geld in meine Finger bekommen. Nur leider kann sie mit heutigen mechanischen Tastaturen nicht mithalten. Die Cherry hat keine Positioning-Plate, kein Hot-Swap, kein N-Key-Rollover, keine Programmierbarkeit, keinen Dämmstoff, und verbesserungswürdigen Sound. Auch bei den Switches machen andere heute besser als der Erfinder der MX-Switches.</p>
+                        <p data-i18n="post2.p3">Aber weil sie zu hübsch ist, um zu verstauben, dachte ich mir: mit meiner Erfahrung und meinem Know-how – nachdem ich schon mehrere Tastaturen für Freunde und Verwandte zusammengebaut und gemoddet habe – könnte ich das Teil sowohl technisch als auch haptisch und optisch aufwerten. So kann ich meinen Horizont erweitern, besser im Programmieren und in der Elektrotechnik werden und nebenbei vielleicht sogar noch etwas Gutes für die Umwelt tun. Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.</p>
+                        <p class="pullquote" data-i18n="post2.quote">Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.</p>
+                        <p data-i18n="post2.p4">Soweit habe ich den in der G80 verbauten Motorola-Chip entfernt und durch einen WeAct Blackpill STM32-F411 ersetzt, welchen ich mit einem MCP23017-I2C-Expander verbunden habe, um genug GPIO-Pins für die Fullsize-Matrix zu haben. Ich habe alles miteinander verlötet und verbunden. Jetzt arbeite ich daran, die Firmware mithilfe von QMK zu schreiben. Durch den I2C-Expander ist es jedoch nötig, eine eigene Scan-Routine in C zu schreiben – etwas, worin ich bisher noch keine Erfahrung habe. Ich habe es geschafft, eine Firmware zu schreiben und sie auf den Blackpill zu flashen. Dieser wird auch als Tastatur-Device vom PC erkannt, aber darüber hinaus gibt sie kein Lebenszeichen von sich.</p>
+                        <p data-i18n="post2.p5">Jetzt ist erst mal wieder Gedankenmachen und Recherche betreiben angesagt, bis ich endlich ein Lebenszeichen von ihr bekomme. Bis es so weit ist, müsst ihr euch aber wohl noch gedulden. Ihr hört von mir, wenn es was Neues zu berichten gibt!</p>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post1.meta">Auftakt</p>
+                    <h2 data-i18n="post1.title">Beginn von etwas ganz Großem</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post1.p1">Hier wird eine neue Webseite entstehen, auf der sich alles um Tastaturen dreht – vor allem deutsche, mechanische Tastaturen. Hierbei handelt es sich um den ersten großen Schritt in Richtung Tastatur-Weltherrschaft.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="footer-grid">
+                <div>
+                    <h2>J-Keebs</h2>
+                    <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
+                    <div class="social-links" aria-label="Profile">
+                        <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col1.heading">Entdecken</h3>
+                    <ul>
+                        <li><a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a></li>
+                        <li><a href="switches.html" data-i18n="nav.switches">Switches</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col2.heading">Community</h3>
+                    <ul>
+                        <li><a href="forum.html" data-i18n="nav.forum">Forum</a></li>
+                        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col3.heading">Kontakt</h3>
+                    <ul>
+                        <li><a href="mailto:jannik_schlueter@hotmail.de" data-i18n="footer.mail">E-Mail schreiben</a></li>
+                        <li><a href="kontakt.html" data-i18n="footer.contactpage">Kontaktseite</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
+                <nav aria-label="Rechtliches">
+                    <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
+                    <a href="datenschutz.html" data-i18n="legal.datenschutz">Datenschutz</a>
+                    <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
+                    <a href="agb.html" data-i18n="legal.agb">AGB</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.J_KEEBS_I18N = {
+            de: {
+                "hero.eyebrow": "Blog",
+                "hero.heading": "Baufortschritt, Umwege, Lessons Learned.",
+                "hero.intro": "Ehrlich dokumentiert: was funktioniert, was nicht, und warum. Kein Hochglanz-Rezept, sondern der echte Weg vom Fundstück zum fertigen Build.",
+                "post2.meta": "Werkstattbericht · Projekt J80-3000",
+                "post2.title": "Projekt J80-3000 – Upcycling eines alten Klassikers",
+                "post2.p1": "Da ich schon die ein oder andere Tastatur auseinandergenommen habe, beschloss ich vor Kurzem, ein anspruchsvolleres Projekt zu beginnen – einen Controller-Swap.",
+                "post2.p2": "Ich liebe den Look der Cherry G80-3000 und konnte einige verschiedene Ausführungen der Tastatur für wenig Geld in meine Finger bekommen. Nur leider kann sie mit heutigen mechanischen Tastaturen nicht mithalten. Die Cherry hat keine Positioning-Plate, kein Hot-Swap, kein N-Key-Rollover, keine Programmierbarkeit, keinen Dämmstoff, und verbesserungswürdigen Sound. Auch bei den Switches machen andere heute besser als der Erfinder der MX-Switches.",
+                "post2.p3": "Aber weil sie zu hübsch ist, um zu verstauben, dachte ich mir: mit meiner Erfahrung und meinem Know-how – nachdem ich schon mehrere Tastaturen für Freunde und Verwandte zusammengebaut und gemoddet habe – könnte ich das Teil sowohl technisch als auch haptisch und optisch aufwerten. So kann ich meinen Horizont erweitern, besser im Programmieren und in der Elektrotechnik werden und nebenbei vielleicht sogar noch etwas Gutes für die Umwelt tun. Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.",
+                "post2.quote": "Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.",
+                "post2.p4": "Soweit habe ich den in der G80 verbauten Motorola-Chip entfernt und durch einen WeAct Blackpill STM32-F411 ersetzt, welchen ich mit einem MCP23017-I2C-Expander verbunden habe, um genug GPIO-Pins für die Fullsize-Matrix zu haben. Ich habe alles miteinander verlötet und verbunden. Jetzt arbeite ich daran, die Firmware mithilfe von QMK zu schreiben. Durch den I2C-Expander ist es jedoch nötig, eine eigene Scan-Routine in C zu schreiben – etwas, worin ich bisher noch keine Erfahrung habe. Ich habe es geschafft, eine Firmware zu schreiben und sie auf den Blackpill zu flashen. Dieser wird auch als Tastatur-Device vom PC erkannt, aber darüber hinaus gibt sie kein Lebenszeichen von sich.",
+                "post2.p5": "Jetzt ist erst mal wieder Gedankenmachen und Recherche betreiben angesagt, bis ich endlich ein Lebenszeichen von ihr bekomme. Bis es so weit ist, müsst ihr euch aber wohl noch gedulden. Ihr hört von mir, wenn es was Neues zu berichten gibt!",
+                "post1.meta": "Auftakt",
+                "post1.title": "Beginn von etwas ganz Großem",
+                "post1.p1": "Hier wird eine neue Webseite entstehen, auf der sich alles um Tastaturen dreht – vor allem deutsche, mechanische Tastaturen. Hierbei handelt es sich um den ersten großen Schritt in Richtung Tastatur-Weltherrschaft."
+            },
+            en: {
+                "hero.eyebrow": "Blog",
+                "hero.heading": "Build progress, detours, lessons learned.",
+                "hero.intro": "Documented honestly: what works, what doesn't, and why. No glossy recipe – the real road from flea-market find to finished build.",
+                "post2.meta": "Workshop log · Project J80-3000",
+                "post2.title": "Project J80-3000 – Upcycling an Old Classic",
+                "post2.p1": "Having already taken apart a keyboard or two, I recently decided to start something more ambitious – a controller swap.",
+                "post2.p2": "I love the look of the Cherry G80-3000, and I managed to get my hands on a few different versions of it for very little money. Sadly, though, it can't keep up with today's mechanical keyboards. The Cherry has no positioning plate, no hot-swap, no N-key rollover, no programmability, no sound dampening, and its acoustics could use work. Even the switches – despite Cherry inventing MX – are outclassed by what's available today.",
+                "post2.p3": "But since it's too good-looking to gather dust, I figured that with my experience and know-how – having already built and modded several keyboards for friends and family – I could upgrade it technically, haptically and visually. That way I get to broaden my horizons, get better at programming and electronics, and maybe even do something good for the environment along the way. I'm surely not the only one with a dusty G80, a soft spot for keys, and a bit of an urge to tinker.",
+                "post2.quote": "I'm surely not the only one with a dusty G80, a soft spot for keys, and a bit of an urge to tinker.",
+                "post2.p4": "So far I've removed the Motorola chip built into the G80 and replaced it with a WeAct Blackpill STM32-F411, which I wired to an MCP23017 I2C expander to get enough GPIO pins for the full-size matrix. I soldered and connected everything. Now I'm working on writing the firmware with QMK. Because of the I2C expander, though, I need to write my own scan routine in C – something I have no experience with so far. I did manage to write firmware and flash it to the Blackpill. The PC recognizes it as a keyboard device, but beyond that, it shows no sign of life.",
+                "post2.p5": "For now it's back to thinking things through and doing research until I finally get a sign of life out of it. Until then, you'll have to be patient. I'll let you know as soon as there's something new to report!",
+                "post1.meta": "Kickoff",
+                "post1.title": "The Start of Something Big",
+                "post1.p1": "A new website is taking shape here, one that's all about keyboards – German mechanical keyboards in particular. This is the first big step toward keyboard world domination."
+            }
+        };
+    </script>
+    <script src="./main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von J-Keebs: Custom-Builds, Upcycling-Projekte und Barebone-Kits – von der Cherry G80-3000 mit neuer Elektronik bis zum Garagenfund.">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("jkeebs-theme") || "dark";
+                document.documentElement.setAttribute("data-theme", t);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <title>J-Keebs | Keyboards</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
+            <span class="keycap">J</span>
+            <span class="brand__name">J-Keebs</span>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="forum.html" data-i18n="nav.forum">Forum</a>
+            <a href="keyboards.html" aria-current="page" data-i18n="nav.keyboards">Keyboards</a>
+            <a href="switches.html" data-i18n="nav.switches">Switches</a>
+            <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="utility-nav">
+            <div class="lang-toggle" role="group" aria-label="Sprache wählen">
+                <button type="button" data-lang-toggle="de" aria-pressed="true">DE</button>
+                <button type="button" data-lang-toggle="en" aria-pressed="false">EN</button>
+            </div>
+            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Farbschema umschalten" data-i18n-attr="aria-label:utility.theme.aria">
+                <span aria-hidden="true">☾</span>
+                <span aria-hidden="true">☀</span>
+                <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero page-hero--single">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio</p>
+            <h1 data-i18n="hero.heading">Sieben Builds, eine Werkbank.</h1>
+            <p data-i18n="hero.intro">Von der Cherry G80-3000 mit komplett neuer Elektronik bis zum ungeprüften Garagenfund: hier landet alles, was auf der Werkbank war oder gerade ist. Fahr mit der Maus über ein Foto oder tippe es an, um den Spickzettel zu sehen – mehrere Fotos je Build lassen sich mit den Pfeilen durchschalten.</p>
+        </section>
+
+        <section class="section">
+            <div class="section__inner gallery-row">
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-1">
+                            <h3 data-i18n="b1.title">J80-3000</h3>
+                            <ul>
+                                <li><strong data-i18n="b1.l1">Basis:</strong> <span data-i18n="b1.v1">Cherry G80-3000</span></li>
+                                <li><strong data-i18n="b1.l2">Controller:</strong> <span data-i18n="b1.v2">WeAct Blackpill STM32-F411</span></li>
+                                <li><strong data-i18n="b1.l3">I/O-Expander:</strong> <span data-i18n="b1.v3">MCP23017 (I2C)</span></li>
+                                <li><strong data-i18n="b1.l4">Firmware:</strong> <span data-i18n="b1.v4">QMK, eigene Scan-Routine</span></li>
+                                <li><strong data-i18n="b1.l5">Status:</strong> <span data-i18n="b1.v5">In Arbeit – Debugging</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:-2deg;" tabindex="0" aria-describedby="cheat-1">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/Cherry_J80-3000_I2C.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="J80-3000 Controller-Swap mit I2C-Expander">
+                                <img data-slide src="images/G80-3000.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Cherry G80-3000 im Retro-Look mit farbigen Tastenkappen">
+                                <img data-slide src="images/G80-3000_Bilangual_Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Cherry G80-3000 mit bilingualen Tastenkappen">
+                                <img data-slide src="images/G80-3000_Coffe-Cat-Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Cherry G80-3000 mit Coffee-Cat-Keycaps">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
+                                <div class="carousel-dots">
+                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 3"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 4"></button>
+
+                                </div>
+                                <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-2">
+                            <h3 data-i18n="b2.title">Monsgeek M1</h3>
+                            <ul>
+                                <li><strong data-i18n="b2.l1">Case:</strong> <span data-i18n="b2.v1">CNC-Aluminium, Gasket-Mount</span></li>
+                                <li><strong data-i18n="b2.l2">Hot-Swap:</strong> <span data-i18n="b2.v2">Ja (QMK/VIA)</span></li>
+                                <li><strong data-i18n="b2.l3">Switches:</strong> <span data-i18n="b2.v3">– ergänzen</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:1.6deg;" tabindex="0" aria-describedby="cheat-2">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/Monsgeek M1.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Monsgeek M1 Aluminium-Tastatur">
+                                <img data-slide src="images/Monsgeek_M1_V5_EVA.jpg" width="3768" height="2120" loading="lazy" decoding="async" alt="Monsgeek M1 V5 im EVA-Farbschema">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
+                                <div class="carousel-dots">
+                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
+                                </div>
+                                <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-3">
+                            <h3 data-i18n="b3.title">Tofu65</h3>
+                            <ul>
+                                <li><strong data-i18n="b3.l1">Case:</strong> <span data-i18n="b3.v1">Aluminium (KBDfans)</span></li>
+                                <li><strong data-i18n="b3.l2">Mount:</strong> <span data-i18n="b3.v2">Top-/Gasket-Mount</span></li>
+                                <li><strong data-i18n="b3.l3">Switches:</strong> <span data-i18n="b3.v3">– ergänzen</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:-1.4deg;" tabindex="0" aria-describedby="cheat-3">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/Tofu65_Bilangual_Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Tofu65 mit bilingualen Tastenkappen">
+                                <img data-slide src="images/Tofu65_Brutalis-Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Tofu65 mit Brutalis-Keycaps">
+                                <img data-slide src="images/TOFU65_Mixed_Keycaps.jpg" width="1600" height="901" loading="lazy" decoding="async" alt="TOFU65 mit gemischten Tastenkappen">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
+                                <div class="carousel-dots">
+                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 3"></button>
+                                </div>
+                                <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-4">
+                            <h3 data-i18n="b4.title">Weikav Stars75</h3>
+                            <ul>
+                                <li><strong data-i18n="b4.l1">Case:</strong> <span data-i18n="b4.v1">CNC-Aluminium</span></li>
+                                <li><strong data-i18n="b4.l2">Verbindung:</strong> <span data-i18n="b4.v2">Tri-Mode (BT / 2,4 GHz / USB-C)</span></li>
+                                <li><strong data-i18n="b4.l3">Switches:</strong> <span data-i18n="b4.v3">– ergänzen</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:2.2deg;" tabindex="0" aria-describedby="cheat-4">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/Stars75.jpg" width="1753" height="986" loading="lazy" decoding="async" alt="Weikav Stars75 Custom Keyboard">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <span class="pill" data-i18n="b4.title">Weikav Stars75</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-5">
+                            <h3 data-i18n="b5.title">Keychron Q3</h3>
+                            <ul>
+                                <li><strong data-i18n="b5.l1">Case:</strong> <span data-i18n="b5.v1">Aluminium, Double-Gasket-Mount</span></li>
+                                <li><strong data-i18n="b5.l2">Hot-Swap:</strong> <span data-i18n="b5.v2">Ja</span></li>
+                                <li><strong data-i18n="b5.l3">Switches:</strong> <span data-i18n="b5.v3">– ergänzen</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:-2.6deg;" tabindex="0" aria-describedby="cheat-5">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/Keychron%20Q3.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Keychron Q3 Aluminium-Tastatur">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <span class="pill" data-i18n="b5.title">Keychron Q3</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-6">
+                            <h3 data-i18n="b6.title">Holz-Case</h3>
+                            <ul>
+                                <li><strong data-i18n="b6.l1">Gehäuse:</strong> <span data-i18n="b6.v1">Holz</span></li>
+                                <li><strong data-i18n="b6.l2">Look:</strong> <span data-i18n="b6.v2">warm, ruhig, handwerklich</span></li>
+                                <li><strong data-i18n="b6.l3">Switches:</strong> <span data-i18n="b6.v3">– ergänzen</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:1.2deg;" tabindex="0" aria-describedby="cheat-6">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/YMK68_Wood_with_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur mit Handballenauflage">
+                                <img data-slide src="images/YMK68_Wood_without_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur ohne Handballenauflage">
+                                <img data-slide src="images/YMK68_Wood_workbench.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank">
+                                <img data-slide src="images/YMK75_Wood_Coffe-Cat_Keycaps.jpg" width="2014" height="975" loading="lazy" decoding="async" alt="YMK75 Holz-Tastatur mit Coffee-Cat-Keycaps">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
+                                <div class="carousel-dots">
+                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 3"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 4"></button>
+                                </div>
+                                <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__stage">
+                        <div class="cheat-sheet" id="cheat-7">
+                            <h3 data-i18n="b7.title">Der Garagenfund</h3>
+                            <ul>
+                                <li><strong data-i18n="b7.l1">Herkunft:</strong> <span data-i18n="b7.v1">Zufallsfund</span></li>
+                                <li><strong data-i18n="b7.l2">Zustand bei Fund:</strong> <span data-i18n="b7.v2">verstaubt, ungetestet</span></li>
+                                <li><strong data-i18n="b7.l3">Status:</strong> <span data-i18n="b7.v3">Cleanup &amp; Check</span></li>
+                            </ul>
+                        </div>
+                        <figure class="polaroid-frame" style="--tilt:-1.8deg;" tabindex="0" aria-describedby="cheat-7">
+                            <div class="polaroid-frame__viewport">
+                                <img class="is-active" data-slide src="images/Cherry_KC_200.jpg" width="3788" height="2131" loading="lazy" decoding="async" alt="Cherry KC 200 Garagenfund">
+                                <img data-slide src="images/Lucly65_Red.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Rotes Lucky65 Keyboard als weiterer Werkbank-Fund">
+                            </div>
+                            <div class="polaroid-frame__foot">
+                                <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
+                                <div class="carousel-dots">
+                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
+                                </div>
+                                <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="footer-grid">
+                <div>
+                    <h2>J-Keebs</h2>
+                    <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
+                    <div class="social-links" aria-label="Profile">
+                        <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col1.heading">Entdecken</h3>
+                    <ul>
+                        <li><a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a></li>
+                        <li><a href="switches.html" data-i18n="nav.switches">Switches</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col2.heading">Community</h3>
+                    <ul>
+                        <li><a href="forum.html" data-i18n="nav.forum">Forum</a></li>
+                        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col3.heading">Kontakt</h3>
+                    <ul>
+                        <li><a href="mailto:jannik_schlueter@hotmail.de" data-i18n="footer.mail">E-Mail schreiben</a></li>
+                        <li><a href="kontakt.html" data-i18n="footer.contactpage">Kontaktseite</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
+                <nav aria-label="Rechtliches">
+                    <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
+                    <a href="datenschutz.html" data-i18n="legal.datenschutz">Datenschutz</a>
+                    <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
+                    <a href="agb.html" data-i18n="legal.agb">AGB</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.J_KEEBS_I18N = {
+            de: {
+                "hero.eyebrow": "Portfolio",
+                "hero.heading": "Sieben Builds, eine Werkbank.",
+                "hero.intro": "Von der Cherry G80-3000 mit komplett neuer Elektronik bis zum ungeprüften Garagenfund: hier landet alles, was auf der Werkbank war oder gerade ist. Fahr mit der Maus über ein Foto oder tippe es an, um den Spickzettel zu sehen – mehrere Fotos je Build lassen sich mit den Pfeilen durchschalten.",
+                "b1.title": "J80-3000", "b1.l1": "Basis:", "b1.v1": "Cherry G80-3000",
+                "b1.l2": "Controller:", "b1.v2": "WeAct Blackpill STM32-F411",
+                "b1.l3": "I/O-Expander:", "b1.v3": "MCP23017 (I2C)",
+                "b1.l4": "Firmware:", "b1.v4": "QMK, eigene Scan-Routine",
+                "b1.l5": "Status:", "b1.v5": "In Arbeit – Debugging",
+                "b2.title": "Monsgeek M1", "b2.l1": "Case:", "b2.v1": "CNC-Aluminium, Gasket-Mount",
+                "b2.l2": "Hot-Swap:", "b2.v2": "Ja (QMK/VIA)", "b2.l3": "Switches:", "b2.v3": "– ergänzen",
+                "b3.title": "Tofu65", "b3.l1": "Case:", "b3.v1": "Aluminium (KBDfans)",
+                "b3.l2": "Mount:", "b3.v2": "Top-/Gasket-Mount", "b3.l3": "Switches:", "b3.v3": "– ergänzen",
+                "b4.title": "Weikav Stars75", "b4.l1": "Case:", "b4.v1": "CNC-Aluminium",
+                "b4.l2": "Verbindung:", "b4.v2": "Tri-Mode (BT / 2,4 GHz / USB-C)", "b4.l3": "Switches:", "b4.v3": "– ergänzen",
+                "b5.title": "Keychron Q3", "b5.l1": "Case:", "b5.v1": "Aluminium, Double-Gasket-Mount",
+                "b5.l2": "Hot-Swap:", "b5.v2": "Ja", "b5.l3": "Switches:", "b5.v3": "– ergänzen",
+                "b6.title": "Holz-Case", "b6.l1": "Gehäuse:", "b6.v1": "Holz",
+                "b6.l2": "Look:", "b6.v2": "warm, ruhig, handwerklich", "b6.l3": "Switches:", "b6.v3": "– ergänzen",
+                "b7.title": "Der Garagenfund", "b7.l1": "Herkunft:", "b7.v1": "Zufallsfund",
+                "b7.l2": "Zustand bei Fund:", "b7.v2": "verstaubt, ungetestet", "b7.l3": "Status:", "b7.v3": "Cleanup & Check"
+            },
+            en: {
+                "hero.eyebrow": "Portfolio",
+                "hero.heading": "Seven builds, one workbench.",
+                "hero.intro": "From the Cherry G80-3000 with all-new electronics to the untested garage find: everything that's been on the workbench (or still is) lives here. Hover or tap a photo to reveal its cheat sheet – builds with more than one photo can be cycled with the arrows.",
+                "b1.title": "J80-3000", "b1.l1": "Base:", "b1.v1": "Cherry G80-3000",
+                "b1.l2": "Controller:", "b1.v2": "WeAct Blackpill STM32-F411",
+                "b1.l3": "I/O expander:", "b1.v3": "MCP23017 (I2C)",
+                "b1.l4": "Firmware:", "b1.v4": "QMK, custom scan routine",
+                "b1.l5": "Status:", "b1.v5": "In progress – debugging",
+                "b2.title": "Monsgeek M1", "b2.l1": "Case:", "b2.v1": "CNC aluminum, gasket mount",
+                "b2.l2": "Hot-swap:", "b2.v2": "Yes (QMK/VIA)", "b2.l3": "Switches:", "b2.v3": "– to add",
+                "b3.title": "Tofu65", "b3.l1": "Case:", "b3.v1": "Aluminum (KBDfans)",
+                "b3.l2": "Mount:", "b3.v2": "Top/gasket mount", "b3.l3": "Switches:", "b3.v3": "– to add",
+                "b4.title": "Weikav Stars75", "b4.l1": "Case:", "b4.v1": "CNC aluminum",
+                "b4.l2": "Connectivity:", "b4.v2": "Tri-mode (BT / 2.4GHz / USB-C)", "b4.l3": "Switches:", "b4.v3": "– to add",
+                "b5.title": "Keychron Q3", "b5.l1": "Case:", "b5.v1": "Aluminum, double-gasket mount",
+                "b5.l2": "Hot-swap:", "b5.v2": "Yes", "b5.l3": "Switches:", "b5.v3": "– to add",
+                "b6.title": "Wood case", "b6.l1": "Case:", "b6.v1": "Wood",
+                "b6.l2": "Look:", "b6.v2": "warm, calm, handcrafted", "b6.l3": "Switches:", "b6.v3": "– to add",
+                "b7.title": "The garage find", "b7.l1": "Origin:", "b7.v1": "Chance find",
+                "b7.l2": "Condition found:", "b7.v2": "dusty, untested", "b7.l3": "Status:", "b7.v3": "Cleanup & check"
+            }
+        };
+    </script>
+    <script src="./main.js" defer></script>
+</body>
+</html>

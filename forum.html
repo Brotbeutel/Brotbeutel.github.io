@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Das J-Keebs-Forum ist in Vorbereitung. Hier entsteht bald ein Ort für Fragen, Zeigefreude und Austausch rund um mechanische Tastaturen.">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("jkeebs-theme") || "dark";
+                document.documentElement.setAttribute("data-theme", t);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <title>J-Keebs | Forum</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
+            <span class="keycap">J</span>
+            <span class="brand__name">J-Keebs</span>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="forum.html" aria-current="page" data-i18n="nav.forum">Forum</a>
+            <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
+            <a href="switches.html" data-i18n="nav.switches">Switches</a>
+            <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="utility-nav">
+            <div class="lang-toggle" role="group" aria-label="Sprache wählen">
+                <button type="button" data-lang-toggle="de" aria-pressed="true">DE</button>
+                <button type="button" data-lang-toggle="en" aria-pressed="false">EN</button>
+            </div>
+            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Farbschema umschalten" data-i18n-attr="aria-label:utility.theme.aria">
+                <span aria-hidden="true">☾</span>
+                <span aria-hidden="true">☀</span>
+                <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero page-hero--single">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Forum</p>
+            <h1 data-i18n="hero.heading">Hier entsteht etwas Neues.</h1>
+            <p data-i18n="hero.intro">Das Forum ist noch im Aufbau. Geplant ist ein Ort für Fragen, Zeigefreude und Austausch – ohne Gatekeeping, mit Fokus auf deutsches ISO-Layout und Upcycling-Projekte.</p>
+        </section>
+
+        <section class="section">
+            <div class="section__head">
+                <div>
+                    <p class="eyebrow" data-i18n="planned.eyebrow">Geplant</p>
+                    <h2 data-i18n="planned.heading">Diese Kategorien sind angedacht.</h2>
+                </div>
+            </div>
+            <div class="section__inner forum-board">
+                <div class="topic-row">
+                    <div>
+                        <h3 data-i18n="cat1.title">Build-Logs &amp; Zeigefreude</h3>
+                        <p class="muted" data-i18n="cat1.body">Eigene Projekte vorstellen, Baufortschritt teilen, Feedback einholen.</p>
+                    </div>
+                    <span class="status-pill" data-i18n="status.planned">Geplant</span>
+                </div>
+                <div class="topic-row">
+                    <div>
+                        <h3 data-i18n="cat2.title">ISO-Layout &amp; Bezugsquellen</h3>
+                        <p class="muted" data-i18n="cat2.body">Wo gibt's welche deutschen Keycap-Sets und Plates gerade zu kaufen?</p>
+                    </div>
+                    <span class="status-pill" data-i18n="status.planned">Geplant</span>
+                </div>
+                <div class="topic-row">
+                    <div>
+                        <h3 data-i18n="cat3.title">Technik &amp; QMK-Hilfe</h3>
+                        <p class="muted" data-i18n="cat3.body">Firmware, Controller-Swaps, Verkabelung – gemeinsam Probleme lösen.</p>
+                    </div>
+                    <span class="status-pill" data-i18n="status.planned">Geplant</span>
+                </div>
+                <div class="topic-row">
+                    <div>
+                        <h3 data-i18n="cat4.title">Second-Hand &amp; Garagenfunde</h3>
+                        <p class="muted" data-i18n="cat4.body">Gebrauchte Funde einschätzen lassen, bevor sie zerlegt werden.</p>
+                    </div>
+                    <span class="status-pill" data-i18n="status.planned">Geplant</span>
+                </div>
+            </div>
+
+            <div class="section__inner callout" style="margin-top: 2rem;">
+                <p class="eyebrow" data-i18n="notify.eyebrow">Bescheid sagen</p>
+                <h3 data-i18n="notify.heading">Willst du wissen, wenn's losgeht?</h3>
+                <p data-i18n="notify.body">Kurz Bescheid geben – dann meldet sich J-Keebs, sobald das Forum startet.</p>
+                <div class="section__actions">
+                    <a class="button" href="kontakt.html" data-i18n="notify.button">Zur Kontaktseite</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="footer-grid">
+                <div>
+                    <h2>J-Keebs</h2>
+                    <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
+                    <div class="social-links" aria-label="Profile">
+                        <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col1.heading">Entdecken</h3>
+                    <ul>
+                        <li><a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a></li>
+                        <li><a href="switches.html" data-i18n="nav.switches">Switches</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col2.heading">Community</h3>
+                    <ul>
+                        <li><a href="forum.html" data-i18n="nav.forum">Forum</a></li>
+                        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="footer.col3.heading">Kontakt</h3>
+                    <ul>
+                        <li><a href="mailto:jannik_schlueter@hotmail.de" data-i18n="footer.mail">E-Mail schreiben</a></li>
+                        <li><a href="kontakt.html" data-i18n="footer.contactpage">Kontaktseite</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
+                <nav aria-label="Rechtliches">
+                    <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
+                    <a href="datenschutz.html" data-i18n="legal.datenschutz">Datenschutz</a>
+                    <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
+                    <a href="agb.html" data-i18n="legal.agb">AGB</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.J_KEEBS_I18N = {
+            de: {
+                "hero.eyebrow": "Forum", "hero.heading": "Hier entsteht etwas Neues.",
+                "hero.intro": "Das Forum ist noch im Aufbau. Geplant ist ein Ort für Fragen, Zeigefreude und Austausch – ohne Gatekeeping, mit Fokus auf deutsches ISO-Layout und Upcycling-Projekte.",
+                "planned.eyebrow": "Geplant", "planned.heading": "Diese Kategorien sind angedacht.",
+                "cat1.title": "Build-Logs & Zeigefreude", "cat1.body": "Eigene Projekte vorstellen, Baufortschritt teilen, Feedback einholen.",
+                "cat2.title": "ISO-Layout & Bezugsquellen", "cat2.body": "Wo gibt's welche deutschen Keycap-Sets und Plates gerade zu kaufen?",
+                "cat3.title": "Technik & QMK-Hilfe", "cat3.body": "Firmware, Controller-Swaps, Verkabelung – gemeinsam Probleme lösen.",
+                "cat4.title": "Second-Hand & Garagenfunde", "cat4.body": "Gebrauchte Funde einschätzen lassen, bevor sie zerlegt werden.",
+                "status.planned": "Geplant",
+                "notify.eyebrow": "Bescheid sagen", "notify.heading": "Willst du wissen, wenn's losgeht?",
+                "notify.body": "Kurz Bescheid geben – dann meldet sich J-Keebs, sobald das Forum startet.",
+                "notify.button": "Zur Kontaktseite"
+            },
+            en: {
+                "hero.eyebrow": "Forum", "hero.heading": "Something new is taking shape here.",
+                "hero.intro": "The forum is still being built. The plan is a place for questions, showing off builds, and exchange – no gatekeeping, with a focus on German ISO layouts and upcycling projects.",
+                "planned.eyebrow": "Planned", "planned.heading": "These categories are in the works.",
+                "cat1.title": "Build logs & showcases", "cat1.body": "Show off your own projects, share build progress, get feedback.",
+                "cat2.title": "ISO layout & sourcing", "cat2.body": "Where to currently find German keycap sets and plates.",
+                "cat3.title": "Technical & QMK help", "cat3.body": "Firmware, controller swaps, wiring – solving problems together.",
+                "cat4.title": "Second-hand & garage finds", "cat4.body": "Get a used find assessed before you take it apart.",
+                "status.planned": "Planned",
+                "notify.eyebrow": "Get notified", "notify.heading": "Want to know when it launches?",
+                "notify.body": "Send a quick note and J-Keebs will let you know once the forum goes live.",
+                "notify.button": "Go to contact page"
+            }
+        };
+    </script>
+    <script src="./main.js" defer></script>
+</body>
+</html>
