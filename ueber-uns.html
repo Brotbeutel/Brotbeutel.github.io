@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,13 @@
     <script>
         (function () {
             try {
-                var t = localStorage.getItem("jkeebs-theme") || "dark";
+                var t = localStorage.getItem("jkeebs-theme") || "light";
                 document.documentElement.setAttribute("data-theme", t);
             } catch (e) {}
         })();
     </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%239e8d69' width='32' height='32'/><text x='50%' y='50%' font-family='Helvetica' font-size='20' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%239e8d69' width='180' height='180'/><text x='90' y='90' font-family='Helvetica' font-size='120' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
     <link rel="stylesheet" href="./style.css">
     <title>J-Keebs | Über uns</title>
 </head>
@@ -26,22 +28,25 @@
         <nav class="site-nav" aria-label="Hauptnavigation">
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
-            <a href="forum.html" data-i18n="nav.forum">Forum</a>
+
             <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
             <a href="switches.html" data-i18n="nav.switches">Switches</a>
             <a href="ueber-uns.html" aria-current="page" data-i18n="nav.about">Über uns</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
         </nav>
         <div class="utility-nav">
-            <div class="lang-toggle" role="group" aria-label="Sprache wählen">
-                <button type="button" data-lang-toggle="de" aria-pressed="true">DE</button>
-                <button type="button" data-lang-toggle="en" aria-pressed="false">EN</button>
+            <div class="lang-toggle" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:utility.lang.aria">
+                <button type="button" data-lang-toggle="de" aria-pressed="true" title="Deutsch">DE</button>
+                <button type="button" data-lang-toggle="en" aria-pressed="false" title="English">EN</button>
             </div>
-            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Farbschema umschalten" data-i18n-attr="aria-label:utility.theme.aria">
-                <span aria-hidden="true">☾</span>
-                <span aria-hidden="true">☀</span>
-                <span class="theme-toggle__thumb" aria-hidden="true"></span>
-            </button>
+            <div class="theme-toggle" role="group" aria-label="Farbschema wählen" data-i18n-attr="aria-label:utility.theme.aria">
+                <button type="button" data-theme-toggle="dark" aria-pressed="false" aria-label="Dunkler Modus" title="Dunkler Modus" data-i18n-attr="aria-label:utility.theme.dark,title:utility.theme.dark">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+                </button>
+                <button type="button" data-theme-toggle="light" aria-pressed="true" aria-label="Heller Modus" title="Heller Modus" data-i18n-attr="aria-label:utility.theme.light,title:utility.theme.light">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/><line x1="17.9" y1="6.1" x2="19.6" y2="4.4"/></g></svg>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -54,7 +59,7 @@
                 <p data-i18n="hero.p2">Angefangen hat alles mit dem Zerlegen und Zusammenbauen fremder Tastaturen für Freunde und Verwandte. Mittlerweile geht es tiefer: Controller-Swaps, eigene QMK-Firmware und die Frage, wie man einen 40 Jahre alten Klassiker wie die Cherry G80-3000 technisch auf ein modernes Niveau hebt, ohne ihren Charme zu verlieren.</p>
             </div>
             <figure class="single-polaroid" style="--tilt:-1.2deg;">
-                <img src="images/YMK68_Wood_workbench.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank von J-Keebs">
+                <img src="images/YMK68_Wood_workbench.jpg" width="4000" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank von J-Keebs">
                 <figcaption>Werkbank · Holz-Build</figcaption>
             </figure>
         </section>
@@ -129,7 +134,6 @@
                 <div>
                     <h3 data-i18n="footer.col2.heading">Community</h3>
                     <ul>
-                        <li><a href="forum.html" data-i18n="nav.forum">Forum</a></li>
                         <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
                         <li><a href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
                     </ul>
@@ -153,6 +157,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Fullscreen Image Viewer Modal -->
+    <div class="fullscreen-overlay" id="fullscreenOverlay" aria-hidden="true">
+        <div class="fullscreen-overlay__container">
+            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--prev" id="fullscreenPrev" aria-label="Vorheriges Bild" title="Vorheriges Bild">‹</button>
+            <button type="button" class="fullscreen-overlay__close" id="fullscreenClose" aria-label="Fullscreen schließen" title="Esc zum Schließen">×</button>
+            <img id="fullscreenImage" class="fullscreen-overlay__image" alt="">
+            <div class="fullscreen-overlay__info" id="fullscreenInfo" aria-live="polite"></div>
+            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--next" id="fullscreenNext" aria-label="Nächstes Bild" title="Nächstes Bild">›</button>
+        </div>
+    </div>
 
     <script>
         window.J_KEEBS_I18N = {

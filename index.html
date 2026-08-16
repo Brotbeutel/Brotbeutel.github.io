@@ -1,52 +1,102 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="J-Keebs baut, moddet und dokumentiert mechanische Tastaturen mit Fokus auf deutsches ISO-Layout, Sound, Haptik und nachhaltige Upcycling-Projekte.">
+    <meta name="keywords" content="mechanische Tastaturen, Custom Keyboards, ISO-DE, QMK, Keyboard Modding, Upcycling">
+    <meta name="author" content="Jannik Schlüter">
+    <meta name="theme-color" content="#36383a">
+    <meta name="color-scheme" content="dark light">
+    
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="J-Keebs | Custom Mechanical Keyboards">
+    <meta property="og:description" content="Mechanische Tastaturen mit Charakter: sauber gebaut, ehrlich dokumentiert und auf Sound, Haptik und deutsches ISO-Layout abgestimmt.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://j-keebs.de/">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="J-Keebs | Custom Mechanical Keyboards">
+    
+    <!-- Canonical & Links -->
+    <link rel="canonical" href="https://j-keebs.de/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%239e8d69' width='32' height='32'/><text x='50%' y='50%' font-family='Helvetica' font-size='20' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%239e8d69' width='180' height='180'/><text x='90' y='90' font-family='Helvetica' font-size='120' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
+    
+    <!-- Preconnect for the Google Fonts pulled in via style.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="./style.css">
+    <title>J-Keebs | Custom Mechanical Keyboards</title>
+    
+    <!-- Theme Script - Inline to prevent FOUC -->
     <script>
         (function () {
             try {
-                var t = localStorage.getItem("jkeebs-theme") || "dark";
+                var t = localStorage.getItem("jkeebs-theme") || "light";
                 document.documentElement.setAttribute("data-theme", t);
             } catch (e) {}
         })();
     </script>
-    <link rel="stylesheet" href="./style.css">
-    <title>J-Keebs | Custom Mechanical Keyboards</title>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "J-Keebs",
+        "url": "https://j-keebs.de/",
+        "description": "Mechanische Tastaturen mit Charakter: sauber gebaut, ehrlich dokumentiert und auf Sound, Haptik und deutsches ISO-Layout abgestimmt.",
+        "logo": "https://j-keebs.de/logo.svg",
+        "sameAs": [
+            "https://github.com/Brotbeutel",
+            "https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/"
+        ],
+        "contact": {
+            "@type": "ContactPoint",
+            "telephone": "",
+            "contactType": "Customer Service",
+            "email": "jannik_schlueter@hotmail.de"
+        }
+    }
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-    <header class="site-header">
-        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
-            <span class="keycap">J</span>
+    <header class="site-header" role="banner">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite" title="J-Keebs - Custom Mechanical Keyboards">
+            <span class="keycap" aria-hidden="true">J</span>
             <span class="brand__name">J-Keebs</span>
         </a>
         <nav class="site-nav" aria-label="Hauptnavigation">
             <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
-            <a href="forum.html" data-i18n="nav.forum">Forum</a>
+
             <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
             <a href="switches.html" data-i18n="nav.switches">Switches</a>
             <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
         </nav>
         <div class="utility-nav">
-            <div class="lang-toggle" role="group" aria-label="Sprache wählen">
-                <button type="button" data-lang-toggle="de" aria-pressed="true">DE</button>
-                <button type="button" data-lang-toggle="en" aria-pressed="false">EN</button>
+            <div class="lang-toggle" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:utility.lang.aria">
+                <button type="button" data-lang-toggle="de" aria-pressed="true" title="Deutsch">DE</button>
+                <button type="button" data-lang-toggle="en" aria-pressed="false" title="English">EN</button>
             </div>
-            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Farbschema umschalten" data-i18n-attr="aria-label:utility.theme.aria">
-                <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg></span>
-                <span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/><line x1="17.9" y1="6.1" x2="19.6" y2="4.4"/></g></svg></span>
-                <span class="theme-toggle__thumb" aria-hidden="true"></span>
-            </button>
+            <div class="theme-toggle" role="group" aria-label="Farbschema wählen" data-i18n-attr="aria-label:utility.theme.aria">
+                <button type="button" data-theme-toggle="dark" aria-pressed="false" aria-label="Dunkler Modus" title="Dunkler Modus" data-i18n-attr="aria-label:utility.theme.dark,title:utility.theme.dark">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+                </button>
+                <button type="button" data-theme-toggle="light" aria-pressed="true" aria-label="Heller Modus" title="Heller Modus" data-i18n-attr="aria-label:utility.theme.light,title:utility.theme.light">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/><line x1="17.9" y1="6.1" x2="19.6" y2="4.4"/></g></svg>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main id="main">
-        <section class="hero" aria-label="J-Keebs">
+    <main id="main" role="main">
+        <section class="hero" aria-label="J-Keebs Startseite Hero">
             <div class="hero__inner">
                 <div>
                     <p class="eyebrow" data-i18n="hero.eyebrow">Custom Keyboards aus Deutschland</p>
@@ -75,7 +125,7 @@
                     <span class="keycap keycap--cool" style="--kc-size:3.6rem; --kc-top:6%; --kc-left:12%; --kc-rot:-12deg;">⇧</span>
                     <span class="keycap" style="--kc-size:4.4rem; --kc-top:16%; --kc-left:46%; --kc-rot:6deg;">J</span>
                     <span class="keycap keycap--muted" style="--kc-size:3rem; --kc-top:12%; --kc-left:74%; --kc-rot:16deg; font-size:0.82rem;">Alt</span>
-                    <span class="keycap keycap--muted" style="--kc-size:3.1rem; --kc-top:44%; --kc-left:8%; --kc-rot:9deg;"></span>
+                    <span class="keycap keycap--muted" style="--kc-size:3.1rem; --kc-top:44%; --kc-left:8%; --kc-rot:9deg;">⊞</span>
                     <span class="keycap keycap--cool" style="--kc-size:3.4rem; --kc-top:46%; --kc-left:62%; --kc-rot:-8deg; font-size:0.86rem;">Strg</span>
                     <span class="keycap keycap--muted" style="--kc-size:2.6rem; --kc-top:70%; --kc-left:28%; --kc-rot:-18deg;">↵</span>
                     <span class="keycap" style="--kc-size:3.2rem; --kc-top:68%; --kc-left:58%; --kc-rot:11deg; font-size:0.86rem;">Esc</span>
@@ -138,7 +188,11 @@
                         </div>
                         <div class="timeline-entry">
                             <span class="timeline-entry__label" data-i18n="timeline4.title">Aktueller Stand</span>
-                            <p data-i18n="timeline4.body">PC erkennt das Board als Tastatur-Device, aber noch kein Lebenszeichen beim Tippen. Debugging läuft.</p>
+                            <p data-i18n="timeline4.body">Voll Funktionsfähig. Programmierbar mit Via.</p>
+                        </div>
+                        <div class="timeline-entry">
+                            <span class="timeline-entry__label" data-i18n="timeline5.title">To-Do</span>
+                            <p data-i18n="timeline5.body">Mehr programmierbare Ebenen mehr LED-Animationen wie in Version 2 - J80-3000 SPI.</p>
                         </div>
                     </div>
                     <div class="section__actions">
@@ -146,8 +200,14 @@
                     </div>
                 </div>
                 <figure class="single-polaroid" style="--tilt:1.4deg;">
-                    <img src="images/Cherry_J80-3000_I2C.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="J80-3000 Controller-Swap mit Blackpill und I2C-Expander auf der Werkbank">
-                    <figcaption>J80-3000 · I2C wiring</figcaption>
+                    <img 
+                        src="images/Cherry_J80-3000_I2C.jpg" 
+                        width="4000" 
+                        loading="lazy" 
+                        decoding="async" 
+                        alt="J80-3000 Controller-Swap mit Blackpill und I2C-Expander auf der Werkbank"
+                        title="J80-3000 I2C Setup">
+                    <figcaption>J80-3000 I2C</figcaption>
                 </figure>
             </div>
         </section>
@@ -172,16 +232,16 @@
                                 <li><strong data-i18n="gallery1.li3label">Status:</strong> <span data-i18n="gallery1.li3value">Cleanup &amp; Check</span></li>
                             </ul>
                         </div>
-                        <figure class="polaroid-frame" style="--tilt:-2deg;" tabindex="0">
+                        <figure class="polaroid-frame" style="--tilt:-2deg;" tabindex="0" role="region" aria-label="Galerie - Der Garagenfund mit mehreren Fotos">
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Cherry_KC_200.jpg" width="3788" height="2131" loading="lazy" decoding="async" alt="Cherry KC 200 Fundstueck auf der Werkbank">
-                                <img data-slide src="images/G80-3000.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Cherry G80-3000 mit farbigen Tastenkappen als Retro-Fund">
+                                <img class="is-active" data-slide src="images/Cherry_KC_200.jpg" width="3788" height="2131" loading="lazy" decoding="async" alt="Cherry KC 200 Fundstueck auf der Werkbank" title="Fundfoto 1">
+                                <img data-slide src="images/G80-3000.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Cherry G80-3000 mit farbigen Tastenkappen als Retro-Fund" title="Fundfoto 2">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
                                 <div class="carousel-dots">
-                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
-                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
+                                    <button type="button" aria-current="true" aria-label="Foto 1 von 2"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2 von 2"></button>
                                 </div>
                                 <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
                             </div>
@@ -199,18 +259,18 @@
                                 <li><strong data-i18n="gallery2.li3label">Switches:</strong> <span data-i18n="gallery2.li3value">– ergänzen</span></li>
                             </ul>
                         </div>
-                        <figure class="polaroid-frame" style="--tilt:1.6deg;" tabindex="0">
+                        <figure class="polaroid-frame" style="--tilt:1.6deg;" tabindex="0" role="region" aria-label="Galerie - Holz-Case mit mehreren Fotos">
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/YMK68_Wood_with_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur mit Handballenauflage">
-                                <img data-slide src="images/YMK68_Wood_without_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur ohne Handballenauflage">
-                                <img data-slide src="images/YMK68_Wood_workbench.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank">
+                                <img class="is-active" data-slide src="images/YMK68_Wood_with_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur mit Handballenauflage" title="Holz-Case Foto 1">
+                                <img data-slide src="images/YMK68_Wood_without_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur ohne Handballenauflage" title="Holz-Case Foto 2">
+                                <img data-slide src="images/YMK68_Wood_workbench.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank" title="Holz-Case Foto 3">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
                                 <div class="carousel-dots">
-                                    <button type="button" aria-current="true" aria-label="Foto 1"></button>
-                                    <button type="button" aria-current="false" aria-label="Foto 2"></button>
-                                    <button type="button" aria-current="false" aria-label="Foto 3"></button>
+                                    <button type="button" aria-current="true" aria-label="Foto 1 von 3"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 2 von 3"></button>
+                                    <button type="button" aria-current="false" aria-label="Foto 3 von 3"></button>
                                 </div>
                                 <button type="button" class="carousel-btn carousel-btn--next" aria-label="Nächstes Foto">›</button>
                             </div>
@@ -225,18 +285,18 @@
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="site-footer__inner">
             <div class="footer-grid">
                 <div>
                     <h2>J-Keebs</h2>
                     <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
-                    <div class="social-links" aria-label="Profile">
-                        <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
-                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    <div class="social-links" aria-label="Soziale Profile und externe Links">
+                        <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs" title="Besuchen Sie das GitHub-Profil">
+                            <svg viewBox="0 0 16 16" aria-hidden="true" role="img"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter">
-                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
+                        <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter" title="Besuchen Sie das LinkedIn-Profil">
+                            <svg viewBox="0 0 16 16" aria-hidden="true" role="img"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -251,7 +311,7 @@
                 <div>
                     <h3 data-i18n="footer.col2.heading">Community</h3>
                     <ul>
-                        <li><a href="forum.html" data-i18n="nav.forum">Forum</a></li>
+
                         <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
                         <li><a href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
                     </ul>
@@ -266,7 +326,7 @@
             </div>
             <div class="footer-bottom">
                 <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
-                <nav aria-label="Rechtliches">
+                <nav aria-label="Rechtliche Seiten">
                     <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
                     <a href="datenschutz.html" data-i18n="legal.datenschutz">Datenschutz</a>
                     <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
@@ -275,6 +335,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Fullscreen Image Viewer Modal -->
+    <div class="fullscreen-overlay" id="fullscreenOverlay" aria-hidden="true">
+        <div class="fullscreen-overlay__container">
+            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--prev" id="fullscreenPrev" aria-label="Vorheriges Bild" title="Vorheriges Bild">‹</button>
+            <button type="button" class="fullscreen-overlay__close" id="fullscreenClose" aria-label="Fullscreen schließen" title="Esc zum Schließen">×</button>
+            <img id="fullscreenImage" class="fullscreen-overlay__image" alt="">
+            <div class="fullscreen-overlay__info" id="fullscreenInfo" aria-live="polite"></div>
+            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--next" id="fullscreenNext" aria-label="Nächstes Bild" title="Nächstes Bild">›</button>
+        </div>
+    </div>
 
     <script>
         window.J_KEEBS_I18N = {
@@ -305,7 +376,8 @@
                 "timeline1.title": "Demontage", "timeline1.body": "Original-Controller (Motorola-Chip) ausgebaut.",
                 "timeline2.title": "Neue Elektronik", "timeline2.body": "WeAct Blackpill STM32-F411 verbaut und über einen MCP23017 I/O-Expander mit genug GPIO-Pins für die Fullsize-Matrix verlötet.",
                 "timeline3.title": "Firmware", "timeline3.body": "QMK-Firmware geschrieben und geflasht – der I2C-Expander braucht dafür eine eigene Scan-Routine in C.",
-                "timeline4.title": "Aktueller Stand", "timeline4.body": "PC erkennt das Board als Tastatur-Device, aber noch kein Lebenszeichen beim Tippen. Debugging läuft.",
+                "timeline4.title": "Aktueller Stand", "timeline4.body": "Voll Funktionsfähig. Programmierbar mit Via.",
+                "timeline5.title": "To-Do", "timeline5.body": "Mehr programmierbare Ebenen mehr LED-Animationen wie in Version 2 - J80-3000 SPI.",
                 "section2.button": "Ganzen Projektbericht lesen",
                 "section3.eyebrow": "Portfolio",
                 "section3.heading": "Ein Blick auf die Werkbank.",
@@ -352,7 +424,8 @@
                 "timeline1.title": "Teardown", "timeline1.body": "Removed the original controller (Motorola chip).",
                 "timeline2.title": "New electronics", "timeline2.body": "Installed a WeAct Blackpill STM32-F411, wired to an MCP23017 I/O expander for enough GPIO pins to cover the full-size matrix.",
                 "timeline3.title": "Firmware", "timeline3.body": "Wrote and flashed QMK firmware – the I2C expander needs its own scan routine in C.",
-                "timeline4.title": "Current status", "timeline4.body": "The PC recognizes the board as a keyboard device, but no sign of life when typing yet. Debugging in progress.",
+                "timeline4.title": "Current status", "timeline4.body": "Fully functional. Programmable with VIA.",
+                "timeline5.title": "To-do", "timeline5.body": "More programmable layers, more LED animations like in version 2 – J80-3000 SPI.",
                 "section2.button": "Read the full build log",
                 "section3.eyebrow": "Portfolio",
                 "section3.heading": "A look at the workbench.",
