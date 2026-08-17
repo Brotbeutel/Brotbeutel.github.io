@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Kontakt zu J-Keebs: E-Mail, Telefon, GitHub und LinkedIn.">
     <script>
         (function () {
@@ -14,25 +14,35 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%239e8d69' width='32' height='32'/><text x='50%' y='50%' font-family='Helvetica' font-size='20' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%239e8d69' width='180' height='180'/><text x='90' y='90' font-family='Helvetica' font-size='120' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
+    
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="J-Keebs | Kontakt">
+    <meta property="og:description" content="Kontakt zu J-Keebs: E-Mail, Telefon, GitHub und LinkedIn.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brotbeutel.github.io/kontakt.html">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="J-Keebs | Kontakt">
+    <link rel="canonical" href="https://brotbeutel.github.io/kontakt.html">
     <link rel="stylesheet" href="./style.css">
     <title>J-Keebs | Kontakt</title>
 </head>
 <body>
-    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <a class="skip-link" href="#main" data-i18n="utility.skiplink">Zum Inhalt springen</a>
 
     <header class="site-header">
-        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite" data-i18n-attr="aria-label:utility.brand.aria">
             <span class="keycap">J</span>
             <span class="brand__name">J-Keebs</span>
         </a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
+        <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation" data-i18n-attr="aria-label:utility.nav.aria">
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
-
             <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
             <a href="switches.html" data-i18n="nav.switches">Switches</a>
             <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="kontakt.html" aria-current="page" data-i18n="nav.kontakt">Kontakt</a>
         </nav>
         <div class="utility-nav">
             <div class="lang-toggle" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:utility.lang.aria">
@@ -48,6 +58,9 @@
                 </button>
             </div>
         </div>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menü" data-i18n-attr="aria-label:utility.navToggle.aria">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main id="main">
@@ -58,48 +71,81 @@
         </section>
 
         <section class="section">
-            <div class="section__inner grid grid--2">
-                <div class="card">
-                    <div class="card__body contact-method">
-                        <div>
-                            <p class="meta" data-i18n="c.address.meta">Anschrift</p>
-                            <p>
-                                J-Keebs<br>
-                                Jannik Schlüter<br>
-                                Maximilianstraße 16<br>
-                                68723 Schwetzingen<br>
-                                Deutschland
-                            </p>
+            <div class="section__inner contact-grid">
+                <div class="contact-method">
+                    <div class="card">
+                        <div class="card__body contact-method">
+                            <div>
+                                <p class="meta" data-i18n="c.address.meta">Anschrift</p>
+                                <p>
+                                    J-Keebs<br>
+                                    Jannik Schlüter<br>
+                                    Maximilianstraße 16<br>
+                                    68723 Schwetzingen<br>
+                                    Deutschland
+                                </p>
+                            </div>
+                            <div>
+                                <p class="meta" data-i18n="c.email.meta">E-Mail</p>
+                                <p><a href="mailto:jannik_schlueter@hotmail.de">jannik_schlueter@hotmail.de</a></p>
+                            </div>
+                            <div>
+                                <p class="meta" data-i18n="c.phone.meta">Telefon</p>
+                                <p><a href="tel:+4915787362802">+49 157 873 628 02</a></p>
+                            </div>
+                            <div class="section__actions">
+                                <a class="button" href="mailto:jannik_schlueter@hotmail.de" data-i18n="c.button">E-Mail schreiben</a>
+                            </div>
                         </div>
-                        <div>
-                            <p class="meta" data-i18n="c.email.meta">E-Mail</p>
-                            <p><a href="mailto:jannik_schlueter@hotmail.de">jannik_schlueter@hotmail.de</a></p>
-                        </div>
-                        <div>
-                            <p class="meta" data-i18n="c.phone.meta">Telefon</p>
-                            <p><a href="tel:+4915787362802">+49 157 873 628 02</a></p>
-                        </div>
-                        <div class="section__actions">
-                            <a class="button" href="mailto:jannik_schlueter@hotmail.de" data-i18n="c.button">E-Mail schreiben</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body contact-method">
+                            <div>
+                                <p class="meta" data-i18n="c.online.meta">Online</p>
+                                <p data-i18n="c.online.body">Code, Firmware-Experimente und Projekte landen auf GitHub. Der fachliche Werdegang steht auf LinkedIn.</p>
+                            </div>
+                            <div class="social-links" aria-label="Profile" style="margin-top: 0.3rem;" data-i18n-attr="aria-label:utility.social.aria">
+                                <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
+                                    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter">
+                                    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card__body contact-method">
-                        <div>
-                            <p class="meta" data-i18n="c.online.meta">Online</p>
-                            <p data-i18n="c.online.body">Code, Firmware-Experimente und Projekte landen auf GitHub. Der fachliche Werdegang steht auf LinkedIn.</p>
-                        </div>
-                        <div class="social-links" aria-label="Profile" style="margin-top: 0.3rem;">
-                            <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
-                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/jannik-schl%C3%BCter-103270423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil von Jannik Schlüter">
-                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0ZM4.75 13.5h-2v-7h2v7Zm-1-8a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3ZM13.5 13.5h-2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.39.94-1.39 1.9v3.67h-2v-7h1.92v.96h.03c.27-.5.92-1.03 1.9-1.03 2.03 0 2.74 1.33 2.74 3.06v4.01Z"/></svg>
-                            </a>
-                        </div>
+                    <div class="card__body">
+                        <p class="meta" data-i18n="c.form.meta">Nachricht</p>
+                        <h3 data-i18n="c.form.heading">Schreib mir direkt</h3>
+                        <p class="muted"><span data-i18n="c.form.intro">Landet direkt in meinem Postfach – keine Anmeldung, kein Newsletter, keine Weitergabe an Dritte außer dem Formular-Dienst selbst (Details dazu in der </span><a href="datenschutz.html" data-i18n="c.form.privacyLink">Datenschutzerklärung</a>).</p>
 
+                        <form class="contact-form" id="contactForm" action="https://formsubmit.co/jannik_schlueter@hotmail.de" method="POST">
+                            <input type="hidden" name="_subject" value="Neue Nachricht über J-Keebs">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://brotbeutel.github.io/kontakt.html?sent=1">
+                            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                            <div class="form-grid">
+                                <label><span data-i18n="c.form.name">Name</span>
+                                    <input type="text" name="name" required autocomplete="name">
+                                </label>
+                                <label><span data-i18n="c.form.email">E-Mail</span>
+                                    <input type="email" name="email" required autocomplete="email">
+                                </label>
+                            </div>
+                            <label><span data-i18n="c.form.message">Nachricht</span>
+                                <textarea name="message" required></textarea>
+                            </label>
+                            <div class="section__actions" style="margin-top: 0;">
+                                <button type="submit" class="button" data-i18n="c.form.submit">Nachricht senden</button>
+                            </div>
+                            <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -112,7 +158,7 @@
                 <div>
                     <h2>J-Keebs</h2>
                     <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
-                    <div class="social-links" aria-label="Profile">
+                    <div class="social-links" aria-label="Profile" data-i18n-attr="aria-label:utility.social.aria">
                         <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
                             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                         </a>
@@ -146,7 +192,7 @@
             </div>
             <div class="footer-bottom">
                 <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
-                <nav aria-label="Rechtliches">
+                <nav aria-label="Rechtliches" data-i18n-attr="aria-label:utility.legalnav.aria">
                     <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
                     <a href="datenschutz.html" data-i18n="legal.datenschutz">Datenschutz</a>
                     <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
@@ -164,7 +210,13 @@
                 "c.address.meta": "Anschrift", "c.email.meta": "E-Mail", "c.phone.meta": "Telefon",
                 "c.button": "E-Mail schreiben",
                 "c.online.meta": "Online", "c.online.body": "Code, Firmware-Experimente und Projekte landen auf GitHub. Der fachliche Werdegang steht auf LinkedIn.",
-                "c.forum.meta": "Community", "c.forum.body": "Das Forum ist in Vorbereitung – bis dahin ist die E-Mail der direkteste Weg."
+                "c.form.meta": "Nachricht", "c.form.heading": "Schreib mir direkt",
+                "c.form.intro": "Landet direkt in meinem Postfach – keine Anmeldung, kein Newsletter, keine Weitergabe an Dritte außer dem Formular-Dienst selbst (Details dazu in der ",
+                "c.form.privacyLink": "Datenschutzerklärung",
+                "c.form.name": "Name", "c.form.email": "E-Mail", "c.form.message": "Nachricht", "c.form.submit": "Nachricht senden",
+                "c.form.sending": "Wird gesendet …",
+                "c.form.success": "Danke! Deine Nachricht ist unterwegs.",
+                "c.form.error": "Ups, das hat nicht geklappt. Schreib mir gerne direkt per E-Mail."
             },
             en: {
                 "hero.eyebrow": "Contact", "hero.heading": "Say hello.",
@@ -172,7 +224,13 @@
                 "c.address.meta": "Address", "c.email.meta": "Email", "c.phone.meta": "Phone",
                 "c.button": "Send an email",
                 "c.online.meta": "Online", "c.online.body": "Code and firmware experiments live on GitHub. My professional background is on LinkedIn.",
-                "c.forum.meta": "Community", "c.forum.body": "The forum is still being built – until then, email is the most direct way to reach out."
+                "c.form.meta": "Message", "c.form.heading": "Write to me directly",
+                "c.form.intro": "Goes straight to my inbox – no account, no newsletter, no sharing with anyone except the form service itself (details in the ",
+                "c.form.privacyLink": "privacy policy (German only)",
+                "c.form.name": "Name", "c.form.email": "Email", "c.form.message": "Message", "c.form.submit": "Send message",
+                "c.form.sending": "Sending …",
+                "c.form.success": "Thanks! Your message is on its way.",
+                "c.form.error": "Hmm, that didn't work. Feel free to email me directly instead."
             }
         };
     </script>

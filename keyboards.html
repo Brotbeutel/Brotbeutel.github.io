@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Portfolio von J-Keebs: Custom-Builds, Upcycling-Projekte und Barebone-Kits – von der Cherry G80-3000 mit neuer Elektronik bis zum Garagenfund.">
     <script>
         (function () {
@@ -14,27 +14,37 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%239e8d69' width='32' height='32'/><text x='50%' y='50%' font-family='Helvetica' font-size='20' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%239e8d69' width='180' height='180'/><text x='90' y='90' font-family='Helvetica' font-size='120' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
+    
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="J-Keebs | Keyboards">
+    <meta property="og:description" content="Portfolio von J-Keebs: Custom-Builds, Upcycling-Projekte und Barebone-Kits – von der Cherry G80-3000 mit neuer Elektronik bis zum Garagenfund.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brotbeutel.github.io/keyboards.html">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="J-Keebs | Keyboards">
+    <link rel="canonical" href="https://brotbeutel.github.io/keyboards.html">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>J-Keebs | Keyboards</title>
 </head>
 <body>
-    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <a class="skip-link" href="#main" data-i18n="utility.skiplink">Zum Inhalt springen</a>
 
     <header class="site-header">
-        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite" data-i18n-attr="aria-label:utility.brand.aria">
             <span class="keycap">J</span>
             <span class="brand__name">J-Keebs</span>
         </a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
+        <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation" data-i18n-attr="aria-label:utility.nav.aria">
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
-
             <a href="keyboards.html" aria-current="page" data-i18n="nav.keyboards">Keyboards</a>
             <a href="switches.html" data-i18n="nav.switches">Switches</a>
             <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
         </nav>
         <div class="utility-nav">
             <div class="lang-toggle" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:utility.lang.aria">
@@ -50,6 +60,9 @@
                 </button>
             </div>
         </div>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menü" data-i18n-attr="aria-label:utility.navToggle.aria">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main id="main">
@@ -75,11 +88,12 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:-2deg;" tabindex="0" aria-describedby="cheat-1">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Cherry_J80-3000_I2C.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="J80-3000 Controller-Swap mit I2C-Expander">
-                                <img data-slide src="images/G80-3000.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Cherry G80-3000 im Retro-Look mit farbigen Tastenkappen">
-                                <img data-slide src="images/G80-3000_Bilangual_Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Cherry G80-3000 mit bilingualen Tastenkappen">
-                                <img data-slide src="images/G80-3000_Coffe-Cat-Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Cherry G80-3000 mit Coffee-Cat-Keycaps">
+                                <img class="is-active" data-slide src="images/Cherry_J80-3000_I2C.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="J80-3000 Controller-Swap mit I2C-Expander" data-i18n-attr="alt:b1.photo1.alt">
+                                <img data-slide src="images/G80-3000.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Cherry G80-3000 im Retro-Look mit farbigen Tastenkappen" data-i18n-attr="alt:b1.photo2.alt">
+                                <img data-slide src="images/G80-3000_Bilangual_Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Cherry G80-3000 mit bilingualen Tastenkappen" data-i18n-attr="alt:b1.photo3.alt">
+                                <img data-slide src="images/G80-3000_Coffe-Cat-Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Cherry G80-3000 mit Coffee-Cat-Keycaps" data-i18n-attr="alt:b1.photo4.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
@@ -107,9 +121,10 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:1.6deg;" tabindex="0" aria-describedby="cheat-2">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Monsgeek M1.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Monsgeek M1 Aluminium-Tastatur">
-                                <img data-slide src="images/Monsgeek_M1_V5_EVA.jpg" width="3768" height="2120" loading="lazy" decoding="async" alt="Monsgeek M1 V5 im EVA-Farbschema">
+                                <img class="is-active" data-slide src="images/Monsgeek M1.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Monsgeek M1 Aluminium-Tastatur" data-i18n-attr="alt:b2.photo1.alt">
+                                <img data-slide src="images/Monsgeek_M1_V5_EVA.jpg" width="3768" height="2120" loading="lazy" decoding="async" alt="Monsgeek M1 V5 im EVA-Farbschema" data-i18n-attr="alt:b2.photo2.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
@@ -134,10 +149,11 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:-1.4deg;" tabindex="0" aria-describedby="cheat-3">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Tofu65_Bilangual_Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Tofu65 mit bilingualen Tastenkappen">
-                                <img data-slide src="images/Tofu65_Brutalis-Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Tofu65 mit Brutalis-Keycaps">
-                                <img data-slide src="images/TOFU65_Mixed_Keycaps.jpg" width="1600" height="901" loading="lazy" decoding="async" alt="TOFU65 mit gemischten Tastenkappen">
+                                <img class="is-active" data-slide src="images/Tofu65_Bilangual_Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Tofu65 mit bilingualen Tastenkappen" data-i18n-attr="alt:b3.photo1.alt">
+                                <img data-slide src="images/Tofu65_Brutalis-Keycaps.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Tofu65 mit Brutalis-Keycaps" data-i18n-attr="alt:b3.photo2.alt">
+                                <img data-slide src="images/TOFU65_Mixed_Keycaps.jpg" width="1600" height="901" loading="lazy" decoding="async" alt="TOFU65 mit gemischten Tastenkappen" data-i18n-attr="alt:b3.photo3.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
@@ -163,8 +179,9 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:2.2deg;" tabindex="0" aria-describedby="cheat-4">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Stars75.jpg" width="1753" height="986" loading="lazy" decoding="async" alt="Weikav Stars75 Custom Keyboard">
+                                <img class="is-active" data-slide src="images/Stars75.jpg" width="1753" height="986" loading="lazy" decoding="async" alt="Weikav Stars75 Custom Keyboard" data-i18n-attr="alt:b4.photo1.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <span class="pill" data-i18n="b4.title">Weikav Stars75</span>
@@ -184,8 +201,9 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:-2.6deg;" tabindex="0" aria-describedby="cheat-5">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Keychron%20Q3.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Keychron Q3 Aluminium-Tastatur">
+                                <img class="is-active" data-slide src="images/Keychron%20Q3.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt="Keychron Q3 Aluminium-Tastatur" data-i18n-attr="alt:b5.photo1.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <span class="pill" data-i18n="b5.title">Keychron Q3</span>
@@ -205,11 +223,12 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:1.2deg;" tabindex="0" aria-describedby="cheat-6">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/YMK68_Wood_with_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur mit Handballenauflage">
-                                <img data-slide src="images/YMK68_Wood_without_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur ohne Handballenauflage">
-                                <img data-slide src="images/YMK68_Wood_workbench.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank">
-                                <img data-slide src="images/YMK75_Wood_Coffe-Cat_Keycaps.jpg" width="2014" height="975" loading="lazy" decoding="async" alt="YMK75 Holz-Tastatur mit Coffee-Cat-Keycaps">
+                                <img class="is-active" data-slide src="images/YMK68_Wood_with_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur mit Handballenauflage" data-i18n-attr="alt:b6.photo1.alt">
+                                <img data-slide src="images/YMK68_Wood_without_wristrest.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur ohne Handballenauflage" data-i18n-attr="alt:b6.photo2.alt">
+                                <img data-slide src="images/YMK68_Wood_workbench.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="YMK68 Holz-Tastatur auf der Werkbank" data-i18n-attr="alt:b6.photo3.alt">
+                                <img data-slide src="images/YMK75_Wood_Coffe-Cat_Keycaps.jpg" width="2014" height="975" loading="lazy" decoding="async" alt="YMK75 Holz-Tastatur mit Coffee-Cat-Keycaps" data-i18n-attr="alt:b6.photo4.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
@@ -236,9 +255,10 @@
                             </ul>
                         </div>
                         <figure class="polaroid-frame" style="--tilt:-1.8deg;" tabindex="0" aria-describedby="cheat-7">
+                            <button type="button" class="cheat-toggle" aria-expanded="false" aria-label="Spickzettel anzeigen" title="Spickzettel anzeigen" data-i18n-attr="aria-label:utility.cheatToggle.aria,title:utility.cheatToggle.aria">i</button>
                             <div class="polaroid-frame__viewport">
-                                <img class="is-active" data-slide src="images/Cherry_KC_200.jpg" width="3788" height="2131" loading="lazy" decoding="async" alt="Cherry KC 200 Garagenfund">
-                                <img data-slide src="images/Lucly65_Red.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Rotes Lucky65 Keyboard als weiterer Werkbank-Fund">
+                                <img class="is-active" data-slide src="images/Cherry_KC_200.jpg" width="3788" height="2131" loading="lazy" decoding="async" alt="Cherry KC 200 Garagenfund" data-i18n-attr="alt:b7.photo1.alt">
+                                <img data-slide src="images/Lucly65_Red.jpg" width="4000" height="2252" loading="lazy" decoding="async" alt="Rotes Lucky65 Keyboard als weiterer Werkbank-Fund" data-i18n-attr="alt:b7.photo2.alt">
                             </div>
                             <div class="polaroid-frame__foot">
                                 <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Vorheriges Foto">‹</button>
@@ -262,7 +282,7 @@
                 <div>
                     <h2>J-Keebs</h2>
                     <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
-                    <div class="social-links" aria-label="Profile">
+                    <div class="social-links" aria-label="Profile" data-i18n-attr="aria-label:utility.social.aria">
                         <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
                             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                         </a>
@@ -296,7 +316,7 @@
             </div>
             <div class="footer-bottom">
                 <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
-                <nav aria-label="Rechtliches">
+                <nav aria-label="Rechtliches" data-i18n-attr="aria-label:utility.legalnav.aria">
                     <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
                     <a href="datenschutz.html" data-i18n="legal.datenschutz">Datenschutz</a>
                     <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
@@ -308,11 +328,11 @@
 
     <div class="fullscreen-overlay" id="fullscreenOverlay" aria-hidden="true">
         <div class="fullscreen-overlay__container">
-            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--prev" id="fullscreenPrev" aria-label="Vorheriges Bild" title="Vorheriges Bild">‹</button>
-            <button type="button" class="fullscreen-overlay__close" id="fullscreenClose" aria-label="Fullscreen schließen" title="Esc zum Schließen">×</button>
+            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--prev" id="fullscreenPrev" aria-label="Vorheriges Bild" title="Vorheriges Bild" data-i18n-attr="aria-label:utility.fullscreen.prev,title:utility.fullscreen.prev">‹</button>
+            <button type="button" class="fullscreen-overlay__close" id="fullscreenClose" aria-label="Fullscreen schließen" title="Esc zum Schließen" data-i18n-attr="aria-label:utility.fullscreen.close,title:utility.fullscreen.closeTitle">×</button>
             <img id="fullscreenImage" class="fullscreen-overlay__image" alt="">
             <div class="fullscreen-overlay__info" id="fullscreenInfo" aria-live="polite"></div>
-            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--next" id="fullscreenNext" aria-label="Nächstes Bild" title="Nächstes Bild">›</button>
+            <button type="button" class="fullscreen-overlay__nav fullscreen-overlay__nav--next" id="fullscreenNext" aria-label="Nächstes Bild" title="Nächstes Bild" data-i18n-attr="aria-label:utility.fullscreen.next,title:utility.fullscreen.next">›</button>
         </div>
     </div>
 
@@ -338,7 +358,24 @@
                 "b6.title": "Holz-Case", "b6.l1": "Gehäuse:", "b6.v1": "Holz",
                 "b6.l2": "Look:", "b6.v2": "warm, ruhig, handwerklich", "b6.l3": "Switches:", "b6.v3": "– ergänzen",
                 "b7.title": "Der Garagenfund", "b7.l1": "Herkunft:", "b7.v1": "Zufallsfund",
-                "b7.l2": "Zustand bei Fund:", "b7.v2": "verstaubt, ungetestet", "b7.l3": "Status:", "b7.v3": "Cleanup & Check"
+                "b7.l2": "Zustand bei Fund:", "b7.v2": "verstaubt, ungetestet", "b7.l3": "Status:", "b7.v3": "Cleanup & Check",
+                "b1.photo1.alt": "J80-3000 Controller-Swap mit I2C-Expander",
+                "b1.photo2.alt": "Cherry G80-3000 im Retro-Look mit farbigen Tastenkappen",
+                "b1.photo3.alt": "Cherry G80-3000 mit bilingualen Tastenkappen",
+                "b1.photo4.alt": "Cherry G80-3000 mit Coffee-Cat-Keycaps",
+                "b2.photo1.alt": "Monsgeek M1 Aluminium-Tastatur",
+                "b2.photo2.alt": "Monsgeek M1 V5 im EVA-Farbschema",
+                "b3.photo1.alt": "Tofu65 mit bilingualen Tastenkappen",
+                "b3.photo2.alt": "Tofu65 mit Brutalis-Keycaps",
+                "b3.photo3.alt": "TOFU65 mit gemischten Tastenkappen",
+                "b4.photo1.alt": "Weikav Stars75 Custom Keyboard",
+                "b5.photo1.alt": "Keychron Q3 Aluminium-Tastatur",
+                "b6.photo1.alt": "YMK68 Holz-Tastatur mit Handballenauflage",
+                "b6.photo2.alt": "YMK68 Holz-Tastatur ohne Handballenauflage",
+                "b6.photo3.alt": "YMK68 Holz-Tastatur auf der Werkbank",
+                "b6.photo4.alt": "YMK75 Holz-Tastatur mit Coffee-Cat-Keycaps",
+                "b7.photo1.alt": "Cherry KC 200 Garagenfund",
+                "b7.photo2.alt": "Rotes Lucky65 Keyboard als weiterer Werkbank-Fund"
             },
             en: {
                 "hero.eyebrow": "Portfolio",
@@ -360,7 +397,24 @@
                 "b6.title": "Wood case", "b6.l1": "Case:", "b6.v1": "Wood",
                 "b6.l2": "Look:", "b6.v2": "warm, calm, handcrafted", "b6.l3": "Switches:", "b6.v3": "– to add",
                 "b7.title": "The garage find", "b7.l1": "Origin:", "b7.v1": "Chance find",
-                "b7.l2": "Condition found:", "b7.v2": "dusty, untested", "b7.l3": "Status:", "b7.v3": "Cleanup & check"
+                "b7.l2": "Condition found:", "b7.v2": "dusty, untested", "b7.l3": "Status:", "b7.v3": "Cleanup & check",
+                "b1.photo1.alt": "J80-3000 controller swap with I2C expander",
+                "b1.photo2.alt": "Cherry G80-3000 in a retro look with colorful keycaps",
+                "b1.photo3.alt": "Cherry G80-3000 with bilingual keycaps",
+                "b1.photo4.alt": "Cherry G80-3000 with Coffee Cat keycaps",
+                "b2.photo1.alt": "Monsgeek M1 aluminum keyboard",
+                "b2.photo2.alt": "Monsgeek M1 V5 in the EVA color scheme",
+                "b3.photo1.alt": "Tofu65 with bilingual keycaps",
+                "b3.photo2.alt": "Tofu65 with Brutalis keycaps",
+                "b3.photo3.alt": "TOFU65 with mixed keycaps",
+                "b4.photo1.alt": "Weikav Stars75 custom keyboard",
+                "b5.photo1.alt": "Keychron Q3 aluminum keyboard",
+                "b6.photo1.alt": "YMK68 wood keyboard with wrist rest",
+                "b6.photo2.alt": "YMK68 wood keyboard without wrist rest",
+                "b6.photo3.alt": "YMK68 wood keyboard on the workbench",
+                "b6.photo4.alt": "YMK75 wood keyboard with Coffee Cat keycaps",
+                "b7.photo1.alt": "Cherry KC 200 garage find",
+                "b7.photo2.alt": "Red Lucky65 keyboard, another workbench find"
             }
         };
     </script>

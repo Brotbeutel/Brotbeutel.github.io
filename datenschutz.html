@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Datenschutzerklärung von J-Keebs gemäß DSGVO.">
     <script>
         (function () {
@@ -14,25 +14,35 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%239e8d69' width='32' height='32'/><text x='50%' y='50%' font-family='Helvetica' font-size='20' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%239e8d69' width='180' height='180'/><text x='90' y='90' font-family='Helvetica' font-size='120' font-weight='bold' fill='%23363a' text-anchor='middle' dominant-baseline='middle'>J</text></svg>">
+    
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="J-Keebs | Datenschutz">
+    <meta property="og:description" content="Datenschutzerklärung von J-Keebs gemäß DSGVO.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brotbeutel.github.io/datenschutz.html">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="J-Keebs | Datenschutz">
+    <link rel="canonical" href="https://brotbeutel.github.io/datenschutz.html">
     <link rel="stylesheet" href="./style.css">
     <title>J-Keebs | Datenschutz</title>
 </head>
 <body>
-    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <a class="skip-link" href="#main" data-i18n="utility.skiplink">Zum Inhalt springen</a>
 
     <header class="site-header">
-        <a class="brand" href="index.html" aria-label="J-Keebs Startseite">
+        <a class="brand" href="index.html" aria-label="J-Keebs Startseite" data-i18n-attr="aria-label:utility.brand.aria">
             <span class="keycap">J</span>
             <span class="brand__name">J-Keebs</span>
         </a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
+        <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation" data-i18n-attr="aria-label:utility.nav.aria">
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
-
             <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
             <a href="switches.html" data-i18n="nav.switches">Switches</a>
             <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
         </nav>
         <div class="utility-nav">
             <div class="lang-toggle" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:utility.lang.aria">
@@ -48,6 +58,9 @@
                 </button>
             </div>
         </div>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menü" data-i18n-attr="aria-label:utility.navToggle.aria">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main id="main">
@@ -61,7 +74,7 @@
             <div class="section__inner legal">
 
                 <div class="legal-card">
-                    <p class="note">Diese Erklärung deckt die Grundstruktur nach DSGVO ab. Zwei Stellen sind bewusst als Platzhalter markiert, weil ich deine konkrete Hosting-Umgebung nicht kenne – trage dort deinen Hoster und ggf. eingesetzte Tools ein, bevor die Seite live geht. Diese Seite ersetzt keine Rechtsberatung.</p>
+                    <p class="note">Diese Erklärung deckt die Grundstruktur nach DSGVO ab und ist auf den aktuellen Aufbau der Seite (Hosting via GitHub Pages, Kontaktformular via FormSubmit) zugeschnitten. Solltest du künftig weitere externe Dienste einbinden (z. B. Statistik-Tools), ergänze diese Seite entsprechend. Diese Seite ersetzt keine Rechtsberatung.</p>
                 </div>
 
                 <section>
@@ -88,7 +101,7 @@
                     <h2>Datenerfassung beim Besuch der Website</h2>
                     <div class="legal-card">
                         <p>Beim Aufruf dieser Website erfasst der Hosting-Provider automatisch Informationen in sogenannten Server-Logfiles, die dein Browser übermittelt. Dazu gehören üblicherweise: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am technisch fehlerfreien Betrieb der Website).</p>
-                        <p class="note">Hosting-Anbieter: – ergänzen (Name, Sitz und ggf. Link zur Datenschutzerklärung des Hosters).</p>
+                        <p class="note">Hosting-Anbieter: Diese Website wird über GitHub Pages gehostet (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Weitere Informationen findest du im <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
                     </div>
                 </section>
 
@@ -96,7 +109,7 @@
                     <h2>Kontaktaufnahme</h2>
                     <div class="legal-card">
                         <p>Wenn du mich per E-Mail, Telefon oder über ein Kontaktformular kontaktierst, werden deine Angaben (z. B. Name, E-Mail-Adresse, Nachrichtentext) ausschließlich zur Bearbeitung deiner Anfrage gespeichert und verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Anfrage) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind.</p>
-                        <p class="note">Sofern das Kontaktformular auf dieser Seite über einen externen Dienst versendet oder gespeichert wird (z. B. Formular-Backend, E-Mail-Marketing-Tool): – ergänzen.</p>
+                        <p class="note">Das Kontaktformular auf der <a href="kontakt.html">Kontaktseite</a> wird technisch über den externen Formular-Dienst FormSubmit (Devro LABS) abgewickelt. Deine Eingaben (Name, E-Mail-Adresse, Nachricht) werden dabei an formsubmit.co übermittelt und von dort per E-Mail an mich weitergeleitet – auf meiner eigenen Website wird nichts gespeichert. FormSubmit hält Einreichungen laut eigener Angabe für 30 Tage zur Absicherung gegen Datenverlust vor. Weitere Informationen findest du in der <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von FormSubmit</a>. Wer das nicht möchte, kann mich stattdessen jederzeit direkt per E-Mail oder Telefon erreichen (siehe oben).</p>
                     </div>
                 </section>
 
@@ -124,7 +137,7 @@
                 <div>
                     <h2>J-Keebs</h2>
                     <p data-i18n="footer.tagline">Custom Mechanical Keyboards, Modding und Upcycling mit Fokus auf deutsches ISO-Layout.</p>
-                    <div class="social-links" aria-label="Profile">
+                    <div class="social-links" aria-label="Profile" data-i18n-attr="aria-label:utility.social.aria">
                         <a href="https://github.com/Brotbeutel" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil von J-Keebs">
                             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
                         </a>
@@ -158,7 +171,7 @@
             </div>
             <div class="footer-bottom">
                 <p data-i18n="footer.copyright">&copy; 2026 J-Keebs. Alle Rechte vorbehalten.</p>
-                <nav aria-label="Rechtliches">
+                <nav aria-label="Rechtliches" data-i18n-attr="aria-label:utility.legalnav.aria">
                     <a href="impressum.html" data-i18n="legal.impressum">Impressum</a>
                     <a href="datenschutz.html" aria-current="page" data-i18n="legal.datenschutz">Datenschutz</a>
                     <a href="cookies.html" data-i18n="legal.cookies">Cookies</a>
