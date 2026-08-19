@@ -12,7 +12,7 @@
 :root {
     color-scheme: light dark;
 
-    /* -- Palette (deine 10 Hexcodes als Basis, Gold als Hauptakzent obendrauf) -- */
+
     --swatch-mocha: #8c7e74;
     --swatch-greige: #c3b8ad;
     --swatch-offwhite: #e6e2de;
@@ -32,7 +32,6 @@
     --text: var(--swatch-cream);
     --text-dim: var(--swatch-greige);
 
-    /* Gold = Hauptakzent, überall. Stahlblau = Zweitfarbe, nur sparsam an 2-3 Stellen. */
     --accent: #9e8d69;
     --accent-bright: #ddc79c;
     --accent-shade: #63522d;
@@ -358,11 +357,7 @@ code { font-family: var(--font-mono); color: var(--accent-bright); }
     margin-left: auto;
 }
 
-/* -- Sprach- & Farbschema-Umschalter -- */
-/* Beide sind identisch aufgebaut: eine Gruppe mit zwei echten Buttons, von denen */
-/* immer genau einer aria-pressed="true" trägt. Kein Slider, kein Toggle-State –  */
-/* Klick auf einen Button wählt dessen Wert direkt aus. */
-/* outline statt border: die Umrandung beeinflusst dadurch nie die Innenmaße. */
+/* -- Sprach- & Farbschema-Umschalter -- *//
 
 .lang-toggle,
 .theme-toggle {

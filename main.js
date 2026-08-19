@@ -1,7 +1,7 @@
 window.J_KEEBS_I18N_COMMON = {
     de: {
         "nav.home": "Home", "nav.blog": "Blog", "nav.keyboards": "Keyboards",
-        "nav.switches": "Switches", "nav.about": "Über uns", "nav.faq": "FAQ", "nav.kontakt": "Kontakt",
+        "nav.switches": "Switches", "nav.about": "Über mich", "nav.faq": "FAQ", "nav.kontakt": "Kontakt",
         "utility.lang.aria": "Sprache wählen",
         "utility.theme.aria": "Farbschema wählen",
         "utility.theme.dark": "Dunkler Modus",

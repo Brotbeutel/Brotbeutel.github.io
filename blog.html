@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Der J-Keebs-Blog: Baufortschritt, Umwege und Lessons Learned rund um Custom-Tastaturen – aktuell der Umbau der Cherry G80-3000 zum J80-3000.">
+    <meta name="description" content="Der J-Keebs-Blog: persönliche Geschichten, Projekte, Restaurierungen und technische Experimente rund um mechanische Tastaturen.">
     <script>
         (function () {
             try {
@@ -17,7 +18,7 @@
     
     <!-- Open Graph & Social -->
     <meta property="og:title" content="J-Keebs | Blog">
-    <meta property="og:description" content="Der J-Keebs-Blog: Baufortschritt, Umwege und Lessons Learned rund um Custom-Tastaturen – aktuell der Umbau der Cherry G80-3000 zum J80-3000.">
+    <meta property="og:description" content="Der J-Keebs-Blog: persönliche Geschichten, Projekte, Restaurierungen und technische Experimente rund um mechanische Tastaturen.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://brotbeutel.github.io/blog.html">
     <meta property="og:locale" content="de_DE">
@@ -40,7 +41,7 @@
             <a href="blog.html" aria-current="page" data-i18n="nav.blog">Blog</a>
             <a href="keyboards.html" data-i18n="nav.keyboards">Keyboards</a>
             <a href="switches.html" data-i18n="nav.switches">Switches</a>
-            <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
+            <a href="ueber-uns.html" data-i18n="nav.about">Über mich</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
             <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
         </nav>
@@ -66,23 +67,75 @@
     <main id="main">
         <section class="page-hero page-hero--single">
             <p class="eyebrow" data-i18n="hero.eyebrow">Blog</p>
-            <h1 data-i18n="hero.heading">Baufortschritt, Umwege, Lessons Learned.</h1>
-            <p data-i18n="hero.intro">Ehrlich dokumentiert: was funktioniert, was nicht, und warum. Kein Hochglanz-Rezept, sondern der echte Weg vom Fundstück zum fertigen Build.</p>
+            <h1 data-i18n="hero.heading">Gedanken, Projekte und Tastatur-Kaninchenlöcher.</h1>
+            <p data-i18n="hero.intro">Hier geht es nicht nur um fertige Tastaturen. Ich erzähle, wie ich überhaupt in dieses Hobby gerutscht bin, was ich aus alten Boards heraushole und welche Ideen mich gerade beschäftigen – inklusive Umwegen, Fehlversuchen und gelegentlichem „Warum habe ich das eigentlich angefangen?“</p>
         </section>
 
         <section class="section">
             <div class="section__inner blog-list">
 
                 <article class="blog-post">
-                    <p class="blog-post__meta" data-i18n="post2.meta">Werkstattbericht · Projekt J80-3000</p>
-                    <h2 data-i18n="post2.title">Projekt J80-3000 – Upcycling eines alten Klassikers</h2>
+                    <p class="blog-post__meta" data-i18n="post7.meta">Persönlich · Tastaturgeschichte</p>
+                    <h2 data-i18n="post7.title">Wie aus einer Corsair K70 ein Tastatur-Hobby wurde</h2>
                     <div class="blog-post__content">
-                        <p data-i18n="post2.p1">Da ich schon die ein oder andere Tastatur auseinandergenommen habe, beschloss ich vor Kurzem, ein anspruchsvolleres Projekt zu beginnen – einen Controller-Swap.</p>
-                        <p data-i18n="post2.p2">Ich liebe den Look der Cherry G80-3000 und konnte einige verschiedene Ausführungen der Tastatur für wenig Geld in meine Finger bekommen. Nur leider kann sie mit heutigen mechanischen Tastaturen nicht mithalten. Die Cherry hat keine Positioning-Plate, kein Hot-Swap, kein N-Key-Rollover, keine Programmierbarkeit, keinen Dämmstoff, und verbesserungswürdigen Sound. Auch bei den Switches machen andere heute besser als der Erfinder der MX-Switches.</p>
-                        <p data-i18n="post2.p3">Aber weil sie zu hübsch ist, um zu verstauben, dachte ich mir: mit meiner Erfahrung und meinem Know-how – nachdem ich schon mehrere Tastaturen für Freunde und Verwandte zusammengebaut und gemoddet habe – könnte ich das Teil sowohl technisch als auch haptisch und optisch aufwerten. So kann ich meinen Horizont erweitern, besser im Programmieren und in der Elektrotechnik werden und nebenbei vielleicht sogar noch etwas Gutes für die Umwelt tun. Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.</p>
-                        <p class="pullquote" data-i18n="post2.quote">Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.</p>
-                        <p data-i18n="post2.p4">Soweit habe ich den in der G80 verbauten Motorola-Chip entfernt und durch einen WeAct Blackpill STM32-F411 ersetzt, welchen ich mit einem MCP23017-I2C-Expander verbunden habe, um genug GPIO-Pins für die Fullsize-Matrix zu haben. Ich habe alles miteinander verlötet und verbunden. Jetzt arbeite ich daran, die Firmware mithilfe von QMK zu schreiben. Durch den I2C-Expander ist es jedoch nötig, eine eigene Scan-Routine in C zu schreiben – etwas, worin ich bisher noch keine Erfahrung habe. Ich habe es geschafft, eine Firmware zu schreiben und sie auf den Blackpill zu flashen. Dieser wird auch als Tastatur-Device vom PC erkannt, aber darüber hinaus gibt sie kein Lebenszeichen von sich.</p>
-                        <p data-i18n="post2.p5">Jetzt ist erst mal wieder Gedankenmachen und Recherche betreiben angesagt, bis ich endlich ein Lebenszeichen von ihr bekomme. Bis es so weit ist, müsst ihr euch aber wohl noch gedulden. Ihr hört von mir, wenn es was Neues zu berichten gibt!</p>
+                        <p data-i18n="post7.p1">Der Anfang war eigentlich ziemlich banal: Ich hatte eine Corsair K70 Vengeance. Sie war keineswegs eine schlechte Tastatur – aber ich war mit ihr nicht ganz zufrieden.</p>
+                        <p data-i18n="post7.p2">Also begann ich zu recherchieren. Dabei landete ich in der riesigen Welt der Mechanical-Keyboard-Community. Plötzlich waren Switches nicht mehr einfach nur „die Dinger unter den Tasten“, sondern ein eigenes Universum. Und ausgerechnet die Switches meiner K70 waren in dieser Community alles andere als beliebt.</p>
+                        <p data-i18n="post7.p3">Das war der Moment, an dem aus einer kleinen Unzufriedenheit echte Neugier wurde. Was macht einen Switch gut? Warum klingt eine Tastatur anders als eine andere? Und warum geben Menschen absurd viel Geld für kleine Plastik- und Metallteile aus?</p>
+                        <p class="pullquote" data-i18n="post7.quote">Ich wollte irgendwann nicht mehr nur wissen, welche Tastatur besser ist. Ich wollte wissen, warum.</p>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post6.meta">Build-Story · Tofu65 V2</p>
+                    <h2 data-i18n="post6.title">Meine erste eigene Tastatur: die Tofu65 V2</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post6.p1">Irgendwann war klar: Lesen reicht nicht mehr. Ich wollte selbst ausprobieren, wie sich verschiedene Komponenten auf eine Tastatur auswirken.</p>
+                        <p data-i18n="post6.p2">Meine erste selbstgebaute Tastatur wurde eine Tofu65 V2. Zum ersten Mal konnte ich selbst entscheiden, was in der Tastatur steckt und wie das fertige Board aussehen und sich anfühlen soll.</p>
+                        <p data-i18n="post6.p3">Im Nachhinein war das wahrscheinlich der Punkt ohne Wiederkehr. Denn sobald man einmal verstanden hat, dass man eine Tastatur nicht einfach kaufen muss, sondern sie aus vielen einzelnen Entscheidungen besteht, sieht man plötzlich jede Tastatur mit anderen Augen.</p>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post5.meta">Fundstück · Cherry G80-3000</p>
+                    <h2 data-i18n="post5.title">10 € und ein PS/2-Stecker</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post5.p1">Dann kam eine Cherry G80-3000 für gerade einmal 10 €. Bei dem Preis musste ich nicht lange überlegen.</p>
+                        <p data-i18n="post5.p2">Das Problem: Sie hatte einen PS/2-Anschluss. Für eine Tastatur, die eigentlich viel zu schade zum Wegwerfen war, gleichzeitig aber technisch aus einer anderen Zeit stammte, war das fast schon eine Einladung zum Basteln.</p>
+                        <p data-i18n="post5.p3">Aus diesem Fundstück entstand schließlich das Projekt J80-3000. Die Idee war nicht, die alte Cherry einfach durch eine moderne Tastatur zu ersetzen, sondern ihren Charakter zu behalten und sie technisch dort hinzubringen, wo ich sie heute gerne hätte.</p>
+                        <p data-i18n="post5.p4">Und damit begann der Teil des Hobbys, bei dem „ich probiere das mal aus“ plötzlich ziemlich schnell zu „jetzt muss ich wohl C lernen“ werden kann.</p>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post4.meta">Werkstattbericht · Projekt J80-3000</p>
+                    <h2 data-i18n="post4.title">J80-3000 – einer alten Cherry ein zweites Leben geben</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post4.p1">Die G80-3000 hat für mich genau das, was viele alte Geräte interessant macht: Sie sieht nach echter Hardware aus und hat Charakter. Gleichzeitig merkt man ihr an, dass sich die Welt der Tastaturen seit ihrer Entstehung weiterentwickelt hat.</p>
+                        <p data-i18n="post4.p2">Deshalb wollte ich nicht einfach nur einen Adapter für PS/2 bauen. Das Ziel des Projekts ist ein kompletter Controller-Swap. Der originale Controller musste dafür einem WeAct Blackpill mit STM32-F411 weichen.</p>
+                        <p data-i18n="post4.p3">Für die Fullsize-Matrix reicht die Zahl der direkt verfügbaren GPIO-Pins nicht aus. Deshalb kommt zusätzlich ein MCP23017 über I2C zum Einsatz. Hardwareseitig ist das Ganze bereits verbunden und die Firmware lässt sich auf den Blackpill flashen. Der PC erkennt ihn auch als Tastatur-Device – nur tippen möchte die G80 bisher noch nicht.</p>
+                        <p class="pullquote" data-i18n="post4.quote">Der PC sagt „Tastatur erkannt“. Die Tastatur sagt: „Nö.“</p>
+                        <p data-i18n="post4.p4">Der nächste Schritt ist deshalb die Firmware. Durch den I2C-Expander ist eine eigene Scan-Routine nötig. Genau hier wird das Projekt für mich besonders spannend: Ich muss mich in C und die Funktionsweise einer Keyboard-Matrix deutlich tiefer einarbeiten.</p>
+                        <p data-i18n="post4.p5">Das J80-3000-Projekt ist damit noch lange nicht fertig. Und genau das ist eigentlich der Sinn dieses Blogs: Nicht nur das fertige Ergebnis zeigen, sondern auch den Weg dorthin.</p>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post3.meta">Hobby · Community</p>
+                    <h2 data-i18n="post3.title">Der schönste Nebeneffekt: Tastaturen für andere bauen</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post3.p1">Irgendwann blieb es nicht mehr bei meinen eigenen Tastaturen. Freunde und Bekannte bekamen mit, dass man so eine Tastatur tatsächlich komplett nach den eigenen Vorstellungen zusammenstellen kann.</p>
+                        <p data-i18n="post3.p2">Und plötzlich durfte ich für andere Leute Boards zusammenbauen. Das macht besonders viel Spaß, weil dabei jedes Projekt andere Anforderungen hat: anderes Layout, andere Optik, anderes Tippgefühl – und manchmal einfach nur der Wunsch nach „einer Tastatur, die nicht aussieht wie jede andere auf dem Schreibtisch“.</p>
+                        <p data-i18n="post3.p3">Dabei habe ich auch gelernt, dass die perfekte Tastatur nicht zwangsläufig die teuerste ist. Viel wichtiger ist, dass die einzelnen Entscheidungen zusammenpassen und am Ende zur Person passen, die sie benutzt.</p>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <p class="blog-post__meta" data-i18n="post2.meta">Gedanken · Sammeln &amp; Restaurieren</p>
+                    <h2 data-i18n="post2.title">Warum alte Tastaturen plötzlich interessant werden</h2>
+                    <div class="blog-post__content">
+                        <p data-i18n="post2.p1">Seit ich mich intensiver mit Tastaturen beschäftige, sehe ich alte Boards anders. Was früher einfach eine gebrauchte Tastatur war, kann heute ein interessantes Stück Technikgeschichte, ein Ersatzteilspender oder der Anfang eines neuen Projekts sein.</p>
+                        <p data-i18n="post2.p2">Besonders spannend finde ich Tastaturen, die nicht perfekt sind. Vergilbtes Gehäuse, alte Switches, ein ungewöhnlicher Anschluss oder ein Layout, das heute kaum noch jemand baut – genau solche Dinge machen ein Board interessant.</p>
+                        <p data-i18n="post2.p3">Natürlich sammelt man dabei schneller Tastaturen, als man Projekte fertig bekommt. Das ist vermutlich eine der Naturkonstanten dieses Hobbys. Aber gerade beim Restaurieren und Modifizieren geht es mir darum, alten Geräten ihren Charakter zu lassen, statt sie einfach durch etwas Neues zu ersetzen.</p>
                     </div>
                 </article>
 
@@ -90,11 +143,12 @@
                     <p class="blog-post__meta" data-i18n="post1.meta">Auftakt</p>
                     <h2 data-i18n="post1.title">Beginn von etwas ganz Großem</h2>
                     <div class="blog-post__content">
-                        <p data-i18n="post1.p1">Hier wird eine neue Webseite entstehen, auf der sich alles um Tastaturen dreht – vor allem deutsche, mechanische Tastaturen. Hierbei handelt es sich um den ersten großen Schritt in Richtung Tastatur-Weltherrschaft.</p>
+                        <p data-i18n="post1.p1">Hier entsteht eine Webseite rund um mechanische Tastaturen – besonders um solche mit deutschem ISO-Layout, eigene Builds, Restaurierungen und die kleinen technischen Details, die aus einer Tastatur mehr machen als nur ein Eingabegerät.</p>
+                        <p data-i18n="post1.p2">J-Keebs soll dabei kein Hochglanz-Schaufenster werden. Wenn etwas funktioniert, zeige ich es. Wenn etwas nicht funktioniert, vermutlich erst recht. Denn meistens lernt man aus dem zweiten Fall deutlich mehr.</p>
                     </div>
                 </article>
 
-            </div>
+            </div></div>
         </section>
     </main>
 
@@ -125,7 +179,7 @@
                     <h3 data-i18n="footer.col2.heading">Community</h3>
                     <ul>
                         <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
-                        <li><a href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
+                        <li><a href="ueber-uns.html" data-i18n="nav.about">Über mich</a></li>
                     </ul>
                 </div>
                 <div>
@@ -152,35 +206,91 @@
         window.J_KEEBS_I18N = {
             de: {
                 "hero.eyebrow": "Blog",
-                "hero.heading": "Baufortschritt, Umwege, Lessons Learned.",
-                "hero.intro": "Ehrlich dokumentiert: was funktioniert, was nicht, und warum. Kein Hochglanz-Rezept, sondern der echte Weg vom Fundstück zum fertigen Build.",
-                "post2.meta": "Werkstattbericht · Projekt J80-3000",
-                "post2.title": "Projekt J80-3000 – Upcycling eines alten Klassikers",
-                "post2.p1": "Da ich schon die ein oder andere Tastatur auseinandergenommen habe, beschloss ich vor Kurzem, ein anspruchsvolleres Projekt zu beginnen – einen Controller-Swap.",
-                "post2.p2": "Ich liebe den Look der Cherry G80-3000 und konnte einige verschiedene Ausführungen der Tastatur für wenig Geld in meine Finger bekommen. Nur leider kann sie mit heutigen mechanischen Tastaturen nicht mithalten. Die Cherry hat keine Positioning-Plate, kein Hot-Swap, kein N-Key-Rollover, keine Programmierbarkeit, keinen Dämmstoff, und verbesserungswürdigen Sound. Auch bei den Switches machen andere heute besser als der Erfinder der MX-Switches.",
-                "post2.p3": "Aber weil sie zu hübsch ist, um zu verstauben, dachte ich mir: mit meiner Erfahrung und meinem Know-how – nachdem ich schon mehrere Tastaturen für Freunde und Verwandte zusammengebaut und gemoddet habe – könnte ich das Teil sowohl technisch als auch haptisch und optisch aufwerten. So kann ich meinen Horizont erweitern, besser im Programmieren und in der Elektrotechnik werden und nebenbei vielleicht sogar noch etwas Gutes für die Umwelt tun. Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.",
-                "post2.quote": "Ich bin bestimmt nicht der Einzige mit einer staubigen G80, einem Faible für Tasten und ein wenig Basteldrang.",
-                "post2.p4": "Soweit habe ich den in der G80 verbauten Motorola-Chip entfernt und durch einen WeAct Blackpill STM32-F411 ersetzt, welchen ich mit einem MCP23017-I2C-Expander verbunden habe, um genug GPIO-Pins für die Fullsize-Matrix zu haben. Ich habe alles miteinander verlötet und verbunden. Jetzt arbeite ich daran, die Firmware mithilfe von QMK zu schreiben. Durch den I2C-Expander ist es jedoch nötig, eine eigene Scan-Routine in C zu schreiben – etwas, worin ich bisher noch keine Erfahrung habe. Ich habe es geschafft, eine Firmware zu schreiben und sie auf den Blackpill zu flashen. Dieser wird auch als Tastatur-Device vom PC erkannt, aber darüber hinaus gibt sie kein Lebenszeichen von sich.",
-                "post2.p5": "Jetzt ist erst mal wieder Gedankenmachen und Recherche betreiben angesagt, bis ich endlich ein Lebenszeichen von ihr bekomme. Bis es so weit ist, müsst ihr euch aber wohl noch gedulden. Ihr hört von mir, wenn es was Neues zu berichten gibt!",
+                "hero.heading": "Gedanken, Projekte und Tastatur-Kaninchenlöcher.",
+                "hero.intro": "Hier geht es nicht nur um fertige Tastaturen. Ich erzähle, wie ich überhaupt in dieses Hobby gerutscht bin, was ich aus alten Boards heraushole und welche Ideen mich gerade beschäftigen – inklusive Umwegen, Fehlversuchen und gelegentlichem „Warum habe ich das eigentlich angefangen?“",
+                "post7.meta": "Persönlich · Tastaturgeschichte",
+                "post7.title": "Wie aus einer Corsair K70 ein Tastatur-Hobby wurde",
+                "post7.p1": "Der Anfang war eigentlich ziemlich banal: Ich hatte eine Corsair K70 Vengeance. Sie war keineswegs eine schlechte Tastatur – aber ich war mit ihr nicht ganz zufrieden.",
+                "post7.p2": "Also begann ich zu recherchieren. Dabei landete ich in der riesigen Welt der Mechanical-Keyboard-Community. Plötzlich waren Switches nicht mehr einfach nur „die Dinger unter den Tasten“, sondern ein eigenes Universum. Und ausgerechnet die Switches meiner K70 waren in dieser Community alles andere als beliebt.",
+                "post7.p3": "Das war der Moment, an dem aus einer kleinen Unzufriedenheit echte Neugier wurde. Was macht einen Switch gut? Warum klingt eine Tastatur anders als eine andere? Und warum geben Menschen absurd viel Geld für kleine Plastik- und Metallteile aus?",
+                "post7.quote": "Ich wollte irgendwann nicht mehr nur wissen, welche Tastatur besser ist. Ich wollte wissen, warum.",
+                "post6.meta": "Build-Story · Tofu65 V2",
+                "post6.title": "Meine erste eigene Tastatur: die Tofu65 V2",
+                "post6.p1": "Irgendwann war klar: Lesen reicht nicht mehr. Ich wollte selbst ausprobieren, wie sich verschiedene Komponenten auf eine Tastatur auswirken.",
+                "post6.p2": "Meine erste selbstgebaute Tastatur wurde eine Tofu65 V2. Zum ersten Mal konnte ich selbst entscheiden, was in der Tastatur steckt und wie das fertige Board aussehen und sich anfühlen soll.",
+                "post6.p3": "Im Nachhinein war das wahrscheinlich der Punkt ohne Wiederkehr. Denn sobald man einmal verstanden hat, dass man eine Tastatur nicht einfach kaufen muss, sondern sie aus vielen einzelnen Entscheidungen besteht, sieht man plötzlich jede Tastatur mit anderen Augen.",
+                "post5.meta": "Fundstück · Cherry G80-3000",
+                "post5.title": "10 € und ein PS/2-Stecker",
+                "post5.p1": "Dann kam eine Cherry G80-3000 für gerade einmal 10 €. Bei dem Preis musste ich nicht lange überlegen.",
+                "post5.p2": "Das Problem: Sie hatte einen PS/2-Anschluss. Für eine Tastatur, die eigentlich viel zu schade zum Wegwerfen war, gleichzeitig aber technisch aus einer anderen Zeit stammte, war das fast schon eine Einladung zum Basteln.",
+                "post5.p3": "Aus diesem Fundstück entstand schließlich das Projekt J80-3000. Die Idee war nicht, die alte Cherry einfach durch eine moderne Tastatur zu ersetzen, sondern ihren Charakter zu behalten und sie technisch dort hinzubringen, wo ich sie heute gerne hätte.",
+                "post5.p4": "Und damit begann der Teil des Hobbys, bei dem „ich probiere das mal aus“ plötzlich ziemlich schnell zu „jetzt muss ich wohl C lernen“ werden kann.",
+                "post4.meta": "Werkstattbericht · Projekt J80-3000",
+                "post4.title": "J80-3000 – einer alten Cherry ein zweites Leben geben",
+                "post4.p1": "Die G80-3000 hat für mich genau das, was viele alte Geräte interessant macht: Sie sieht nach echter Hardware aus und hat Charakter. Gleichzeitig merkt man ihr an, dass sich die Welt der Tastaturen seit ihrer Entstehung weiterentwickelt hat.",
+                "post4.p2": "Deshalb wollte ich nicht einfach nur einen Adapter für PS/2 bauen. Das Ziel des Projekts ist ein kompletter Controller-Swap. Der originale Controller musste dafür einem WeAct Blackpill mit STM32-F411 weichen.",
+                "post4.p3": "Für die Fullsize-Matrix reicht die Zahl der direkt verfügbaren GPIO-Pins nicht aus. Deshalb kommt zusätzlich ein MCP23017 über I2C zum Einsatz. Hardwareseitig ist das Ganze bereits verbunden und die Firmware lässt sich auf den Blackpill flashen. Der PC erkennt ihn auch als Tastatur-Device – nur tippen möchte die G80 bisher noch nicht.",
+                "post4.quote": "Der PC sagt „Tastatur erkannt“. Die Tastatur sagt: „Nö.“",
+                "post4.p4": "Der nächste Schritt ist deshalb die Firmware. Durch den I2C-Expander ist eine eigene Scan-Routine nötig. Genau hier wird das Projekt für mich besonders spannend: Ich muss mich in C und die Funktionsweise einer Keyboard-Matrix deutlich tiefer einarbeiten.",
+                "post4.p5": "Das J80-3000-Projekt ist damit noch lange nicht fertig. Und genau das ist eigentlich der Sinn dieses Blogs: Nicht nur das fertige Ergebnis zeigen, sondern auch den Weg dorthin.",
+                "post3.meta": "Hobby · Community",
+                "post3.title": "Der schönste Nebeneffekt: Tastaturen für andere bauen",
+                "post3.p1": "Irgendwann blieb es nicht mehr bei meinen eigenen Tastaturen. Freunde und Bekannte bekamen mit, dass man so eine Tastatur tatsächlich komplett nach den eigenen Vorstellungen zusammenstellen kann.",
+                "post3.p2": "Und plötzlich durfte ich für andere Leute Boards zusammenbauen. Das macht besonders viel Spaß, weil dabei jedes Projekt andere Anforderungen hat: anderes Layout, andere Optik, anderes Tippgefühl – und manchmal einfach nur der Wunsch nach „einer Tastatur, die nicht aussieht wie jede andere auf dem Schreibtisch“.",
+                "post3.p3": "Dabei habe ich auch gelernt, dass die perfekte Tastatur nicht zwangsläufig die teuerste ist. Viel wichtiger ist, dass die einzelnen Entscheidungen zusammenpassen und am Ende zur Person passen, die sie benutzt.",
+                "post2.meta": "Gedanken · Sammeln &amp; Restaurieren",
+                "post2.title": "Warum alte Tastaturen plötzlich interessant werden",
+                "post2.p1": "Seit ich mich intensiver mit Tastaturen beschäftige, sehe ich alte Boards anders. Was früher einfach eine gebrauchte Tastatur war, kann heute ein interessantes Stück Technikgeschichte, ein Ersatzteilspender oder der Anfang eines neuen Projekts sein.",
+                "post2.p2": "Besonders spannend finde ich Tastaturen, die nicht perfekt sind. Vergilbtes Gehäuse, alte Switches, ein ungewöhnlicher Anschluss oder ein Layout, das heute kaum noch jemand baut – genau solche Dinge machen ein Board interessant.",
+                "post2.p3": "Natürlich sammelt man dabei schneller Tastaturen, als man Projekte fertig bekommt. Das ist vermutlich eine der Naturkonstanten dieses Hobbys. Aber gerade beim Restaurieren und Modifizieren geht es mir darum, alten Geräten ihren Charakter zu lassen, statt sie einfach durch etwas Neues zu ersetzen.",
                 "post1.meta": "Auftakt",
                 "post1.title": "Beginn von etwas ganz Großem",
-                "post1.p1": "Hier wird eine neue Webseite entstehen, auf der sich alles um Tastaturen dreht – vor allem deutsche, mechanische Tastaturen. Hierbei handelt es sich um den ersten großen Schritt in Richtung Tastatur-Weltherrschaft."
+                "post1.p1": "Hier entsteht eine Webseite rund um mechanische Tastaturen – besonders um solche mit deutschem ISO-Layout, eigene Builds, Restaurierungen und die kleinen technischen Details, die aus einer Tastatur mehr machen als nur ein Eingabegerät.",
+                "post1.p2": "J-Keebs soll dabei kein Hochglanz-Schaufenster werden. Wenn etwas funktioniert, zeige ich es. Wenn etwas nicht funktioniert, vermutlich erst recht. Denn meistens lernt man aus dem zweiten Fall deutlich mehr."
             },
             en: {
                 "hero.eyebrow": "Blog",
-                "hero.heading": "Build progress, detours, lessons learned.",
-                "hero.intro": "Documented honestly: what works, what doesn't, and why. No glossy recipe – the real road from flea-market find to finished build.",
-                "post2.meta": "Workshop log · Project J80-3000",
-                "post2.title": "Project J80-3000 – Upcycling an Old Classic",
-                "post2.p1": "Having already taken apart a keyboard or two, I recently decided to start something more ambitious – a controller swap.",
-                "post2.p2": "I love the look of the Cherry G80-3000, and I managed to get my hands on a few different versions of it for very little money. Sadly, though, it can't keep up with today's mechanical keyboards. The Cherry has no positioning plate, no hot-swap, no N-key rollover, no programmability, no sound dampening, and its acoustics could use work. Even the switches – despite Cherry inventing MX – are outclassed by what's available today.",
-                "post2.p3": "But since it's too good-looking to gather dust, I figured that with my experience and know-how – having already built and modded several keyboards for friends and family – I could upgrade it technically, haptically and visually. That way I get to broaden my horizons, get better at programming and electronics, and maybe even do something good for the environment along the way. I'm surely not the only one with a dusty G80, a soft spot for keys, and a bit of an urge to tinker.",
-                "post2.quote": "I'm surely not the only one with a dusty G80, a soft spot for keys, and a bit of an urge to tinker.",
-                "post2.p4": "So far I've removed the Motorola chip built into the G80 and replaced it with a WeAct Blackpill STM32-F411, which I wired to an MCP23017 I2C expander to get enough GPIO pins for the full-size matrix. I soldered and connected everything. Now I'm working on writing the firmware with QMK. Because of the I2C expander, though, I need to write my own scan routine in C – something I have no experience with so far. I did manage to write firmware and flash it to the Blackpill. The PC recognizes it as a keyboard device, but beyond that, it shows no sign of life.",
-                "post2.p5": "For now it's back to thinking things through and doing research until I finally get a sign of life out of it. Until then, you'll have to be patient. I'll let you know as soon as there's something new to report!",
+                "hero.heading": "Thoughts, projects and keyboard rabbit holes.",
+                "hero.intro": "This isn't just about finished keyboards. I write about how I got into the hobby, what I try to get out of old boards, and what I'm currently thinking about – including detours, failed experiments and the occasional „why did I start this?“",
+                "post7.meta": "Personal · Keyboard story",
+                "post7.title": "How a Corsair K70 turned into a keyboard hobby",
+                "post7.p1": "The beginning was pretty ordinary: I had a Corsair K70 Vengeance. It certainly wasn't a bad keyboard – but I wasn't completely happy with it.",
+                "post7.p2": "So I started researching. That led me into the huge mechanical-keyboard community. Suddenly switches weren't just the things underneath the keycaps, but an entire universe of their own. And as it turned out, the switches in my K70 were anything but popular in that community.",
+                "post7.p3": "That was the moment a small annoyance turned into genuine curiosity. What makes a switch good? Why does one keyboard sound different from another? And why are people willing to spend absurd amounts of money on tiny pieces of plastic and metal?",
+                "post7.quote": "At some point I didn't just want to know which keyboard was better. I wanted to know why.",
+                "post6.meta": "Build story · Tofu65 V2",
+                "post6.title": "My first custom keyboard: the Tofu65 V2",
+                "post6.p1": "Eventually it became clear that reading wasn't enough. I wanted to find out for myself how different components affect a keyboard.",
+                "post6.p2": "My first self-built keyboard was a Tofu65 V2. For the first time, I could decide what went into the board and how the finished keyboard should look and feel.",
+                "post6.p3": "Looking back, this was probably the point of no return. Once you realize that you don't have to buy a keyboard as one fixed product, but can build it from dozens of individual decisions, you start looking at every keyboard differently.",
+                "post5.meta": "Flea-market find · Cherry G80-3000",
+                "post5.title": "€10 and a PS/2 connector",
+                "post5.p1": "Then I found a Cherry G80-3000 for just €10. At that price, there wasn't much thinking required.",
+                "post5.p2": "The catch: it had a PS/2 connector. For a keyboard that was far too nice to throw away, yet clearly came from another technical era, it was almost an invitation to start tinkering.",
+                "post5.p3": "That find eventually became the J80-3000 project. The idea wasn't to simply replace the old Cherry with a modern keyboard, but to keep its character while bringing the technology closer to what I want from a keyboard today.",
+                "post5.p4": "And that's where the hobby entered the territory where „I'll just try this“ can turn surprisingly quickly into „well, I guess I have to learn C now.“",
+                "post4.meta": "Workshop log · Project J80-3000",
+                "post4.title": "J80-3000 – giving an old Cherry a second life",
+                "post4.p1": "The G80-3000 has exactly what makes many old devices interesting to me: it looks like real hardware and has character. At the same time, you can tell how much keyboard technology has evolved since it was designed.",
+                "post4.p2": "So I didn't want to build just a PS/2 adapter. The goal is a complete controller swap. The original controller was replaced with a WeAct Blackpill using an STM32-F411.",
+                "post4.p3": "The full-size matrix needs more GPIO pins than are directly available, so an MCP23017 is being used over I2C as well. The hardware is connected and the firmware can be flashed to the Blackpill. The PC also recognizes it as a keyboard device – it just doesn't want to type yet.",
+                "post4.quote": "The PC says „keyboard detected“. The keyboard says: „Nope.“",
+                "post4.p4": "The next step is therefore the firmware. Because of the I2C expander, a custom scan routine is required. That's what makes this project especially interesting to me: I have to dig much deeper into C and how a keyboard matrix actually works.",
+                "post4.p5": "The J80-3000 project is far from finished. And that's really what this blog is about: not just showing the finished result, but documenting the road that leads there.",
+                "post3.meta": "Hobby · Community",
+                "post3.title": "The best side effect: building keyboards for other people",
+                "post3.p1": "Eventually it stopped being just about my own keyboards. Friends and acquaintances noticed that a keyboard could actually be built around someone's personal preferences.",
+                "post3.p2": "Before long I was building boards for other people too. That's especially fun because every project has different requirements: different layout, different looks, different feel – and sometimes simply the desire for a keyboard that doesn't look like every other keyboard on the desk.",
+                "post3.p3": "It also taught me that the perfect keyboard isn't necessarily the most expensive one. What matters much more is that all the individual choices work together and fit the person using it.",
+                "post2.meta": "Thoughts · Collecting &amp; restoring",
+                "post2.title": "Why old keyboards suddenly become interesting",
+                "post2.p1": "Since getting deeper into keyboards, I see old boards differently. What used to be just a used keyboard can now be an interesting piece of technology history, a donor for parts, or the beginning of a new project.",
+                "post2.p2": "I especially like keyboards that aren't perfect. Yellowed cases, old switches, unusual connectors or layouts hardly anyone builds today – those are exactly the things that make a board interesting.",
+                "post2.p3": "Of course, you start collecting keyboards faster than you can finish projects. That's probably one of the laws of nature in this hobby. But for me, restoring and modifying is about keeping the character of old hardware instead of simply replacing it with something new.",
                 "post1.meta": "Kickoff",
                 "post1.title": "The Start of Something Big",
-                "post1.p1": "A new website is taking shape here, one that's all about keyboards – German mechanical keyboards in particular. This is the first big step toward keyboard world domination."
+                "post1.p1": "A website is taking shape around mechanical keyboards – especially German ISO boards, custom builds, restorations and the little technical details that turn a keyboard into more than just an input device.",
+                "post1.p2": "J-Keebs isn't meant to be a glossy showroom. If something works, I'll show it. If something doesn't work, I'll probably show that too. Most of the time, you learn much more from the second case."
             }
         };
     </script>
